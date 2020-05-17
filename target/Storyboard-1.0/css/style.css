@@ -52,6 +52,9 @@ input#login-submit{
 input#login-submit:hover{
     background-color:#004D40;
 }
+#login-form-container h1 {
+    font-size:35px;
+}
 #login-form-container h4 {
     margin-top:10px;
     margin-bottom:30px;
@@ -64,6 +67,7 @@ input#login-submit:hover{
     margin-top:10px;
     margin-bottom:30px;
     font-weight:300;
+    font-size: 13px;
     font-family: "Roboto", sans-serif;
     color:#A7A7A7;
     margin-bottom:10px;
@@ -73,7 +77,7 @@ input#login-submit:hover{
 /*Begin login page*/
 #login-bg-container {
     height: 100%;
-    background-image:url("../images/storyboard-bgv4.jpg");
+    background-image:url("../images/storyboard-bg.jpg");
     background-repeat:no-repeat;
     background-size: cover;
     background-position: 50%,0px;
