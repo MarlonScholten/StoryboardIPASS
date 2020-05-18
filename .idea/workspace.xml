@@ -7,57 +7,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b138f14a-b5ee-4dc8-b361-3902bb01afeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Anime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Archive.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Genre.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Manga.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Media.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Movie.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Person.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Show.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/css/bootstrap.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/images/storyboard-bgv1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/images/storyboard-bgv2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/images/storyboard-bgv3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/images/storyboard-bgv4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/js/bootstrap.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/marlon/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/marlon/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Anime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Anime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Archive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Archive.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Genre.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Manga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Manga.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Media.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Show.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Show.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -272,7 +233,11 @@
       <workItem from="1589208404706" duration="91000" />
       <workItem from="1589274232315" duration="926000" />
       <workItem from="1589453575410" duration="1950000" />
-      <workItem from="1589711829146" duration="12811000" />
+      <workItem from="1589711829146" duration="13044000" />
+      <workItem from="1589789441882" duration="502000" />
+      <workItem from="1589795734553" duration="2986000" />
+      <workItem from="1589798914024" duration="607000" />
+      <workItem from="1589803006534" duration="10620000" />
     </task>
     <servers />
   </component>
@@ -287,10 +252,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="434" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1588845790850" />
-    <state x="830" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1589740834508">
+    <state x="830" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1589817674478">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="830" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589740834508" />
+    <state x="830" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589817674478" />
     <state x="822" y="416" width="403" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589740099383">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -299,22 +264,26 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="641" y="151" key="CommitChangelistDialog2/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1588865208762" />
-    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1589738879194">
+    <state x="805" y="312" key="FileChooserDialogImpl" timestamp="1589789942275">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589738879194" />
-    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1589738879194">
+    <state x="805" y="312" key="FileChooserDialogImpl/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589789942275" />
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1589741073009">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589738879194" />
-    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1589738879194">
+    <state width="2005" height="305" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589741073009" />
+    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1589741073009">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589738879194" />
-    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1589738879194">
+    <state width="2005" height="305" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589741073009" />
+    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1589741073009">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589738879194" />
+    <state width="2005" height="305" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589741073009" />
+    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1589741073009">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="2005" height="305" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589741073009" />
     <state width="1644" height="305" key="GridCell.Tab.1.bottom" timestamp="1589455949859">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

@@ -1,56 +1,32 @@
 package nl.marlon;
 
 import java.awt.*;
-import java.util.ArrayList;
 
-public class Book {
-	private String title;
-	private String description;
-	private Image thumbnail;
-	private String notes;
+public class Book extends Media{
 	private int page;
 	private String author;
-	private ArrayList<Genre> genres;
 
-	public Book(String title, String description, Image thumbnail, String notes, int page, String author) {
-		this.title = title;
-		this.description = description;
-		this.thumbnail = thumbnail;
-		this.notes = notes;
+	//Full  constructor
+	public Book(String title, String description, String notes, int page, String author){
+		super(title, description, notes);
 		this.page = page;
 		this.author = author;
 	}
-
-	public String getTitle() {
-		return title;
+	// No notes
+	public Book(String title, String description, int page, String author){
+		super(title, description);
+		this.page = page;
+		this.author = author;
 	}
-
-	public void setTitle(String title) {
-		this.title = title;
+	// No author
+	public Book(String title, String description, String notes, int page){
+		super(title, description, notes);
+		this.page = page;
 	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Image getThumbnail() {
-		return thumbnail;
-	}
-
-	public void setThumbnail(Image thumbnail) {
-		this.thumbnail = thumbnail;
-	}
-
-	public String getNotes() {
-		return notes;
-	}
-
-	public void setNotes(String notes) {
-		this.notes = notes;
+	// No Notes & author
+	public Book(String title, String description, int page){
+		super(title, description);
+		this.page = page;
 	}
 
 	public int getPage() {

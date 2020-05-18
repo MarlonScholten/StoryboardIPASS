@@ -1,64 +1,30 @@
 package nl.marlon;
 
-import java.awt.*;
-import java.util.ArrayList;
-
-public class Manga {
-	private String title;
-	private String description;
-	private Image thumbnail;
-	private String notes;
+public class Manga extends Media {
 	private int chapter;
 	private String link;
-	private ArrayList<Genre> genres;
 
-	public Manga(String title, String description, Image thumbnail, String notes, int chapter) {
-		this.title = title;
-		this.description = description;
-		this.thumbnail = thumbnail;
-		this.notes = notes;
-		this.chapter = chapter;
-	}
-
-	public Manga(String title, String description, Image thumbnail, String notes, int chapter, String link) {
-		this.title = title;
-		this.description = description;
-		this.thumbnail = thumbnail;
-		this.notes = notes;
+	//Full constructor
+	public Manga(String title, String description, String notes, int chapter, String link){
+		super(title, description, notes);
 		this.chapter = chapter;
 		this.link = link;
 	}
-
-	public String getTitle() {
-		return title;
+	//No notes
+	public Manga(String title, String description, int chapter, String link){
+		super(title, description);
+		this.chapter = chapter;
+		this.link = link;
 	}
-
-	public void setTitle(String title) {
-		this.title = title;
+	//No link
+	public Manga(String title, String description, String notes, int chapter){
+		super(title, description, notes);
+		this.chapter = chapter;
 	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Image getThumbnail() {
-		return thumbnail;
-	}
-
-	public void setThumbnail(Image thumbnail) {
-		this.thumbnail = thumbnail;
-	}
-
-	public String getNotes() {
-		return notes;
-	}
-
-	public void setNotes(String notes) {
-		this.notes = notes;
+	//No notes & link
+	public Manga(String title, String description, int chapter){
+		super(title, description);
+		this.chapter = chapter;
 	}
 
 	public int getChapter() {

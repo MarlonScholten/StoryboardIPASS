@@ -4,11 +4,14 @@ public class Person {
 	private String username;
 	private String email;
 	private String password;
+	private Archive archive;
 
-	public Person(String username, String email, String password) {
+	// Full constructor
+	public Person(String username, String email, String password, Archive archive) {
 		this.username = username;
 		this.email = email;
 		this.password = password;
+		this.archive = archive;
 	}
 
 	public String getUsername() {
@@ -33,5 +36,13 @@ public class Person {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public Archive getArchive() {
+		return archive;
+	}
+
+	public void setArchive(Archive archive) {
+		this.archive = archive;
 	}
 }
