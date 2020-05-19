@@ -1,16 +1,20 @@
 package nl.marlon;
 
 import javax.print.attribute.standard.Media;
-import java.util.List;
+import java.util.ArrayList;
 
 public class Archive {
 	private Person owner;
-	private List<Media> allMedia;
+	private ArrayList<Media> allMedia = new ArrayList<>();
 
 	// Full constructor
-	public Archive(Person owner, List<Media> allMedia) {
+	public Archive(Person owner, ArrayList<Media> allMedia) {
 		this.owner = owner;
 		this.allMedia = allMedia;
+	}
+
+	public Archive(Person owner) {
+		this.owner = owner;
 	}
 
 	public Person getOwner() {
@@ -21,7 +25,7 @@ public class Archive {
 		this.owner = owner;
 	}
 
-	public List<Media> getAllMedia() {
+	public ArrayList<Media> getAllMedia() {
 		return allMedia;
 	}
 }

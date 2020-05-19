@@ -7,12 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b138f14a-b5ee-4dc8-b361-3902bb01afeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/brave-new-world.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Anime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Anime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Archive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Archive.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Category.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Genre.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Genre.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Manga.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Manga.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/Media.java" afterDir="false" />
@@ -237,7 +237,8 @@
       <workItem from="1589789441882" duration="502000" />
       <workItem from="1589795734553" duration="2986000" />
       <workItem from="1589798914024" duration="607000" />
-      <workItem from="1589803006534" duration="10620000" />
+      <workItem from="1589803006534" duration="10730000" />
+      <workItem from="1589875284723" duration="9274000" />
     </task>
     <servers />
   </component>
@@ -252,10 +253,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="434" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1588845790850" />
-    <state x="830" y="241" key="#com.intellij.ide.util.MemberChooser" timestamp="1589817674478">
+    <state x="686" y="250" width="830" height="566" key="#com.intellij.ide.util.MemberChooser" timestamp="1589886032647">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="830" y="241" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589817674478" />
+    <state x="686" y="250" width="830" height="566" key="#com.intellij.ide.util.MemberChooser/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589886032647" />
     <state x="822" y="416" width="403" height="288" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1589740099383">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -268,22 +269,22 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="312" key="FileChooserDialogImpl/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589789942275" />
-    <state width="2005" height="305" key="GridCell.Tab.0.bottom" timestamp="1589741073009">
+    <state width="1004" height="984" key="GridCell.Tab.0.bottom" timestamp="1589886173704">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589741073009" />
-    <state width="2005" height="305" key="GridCell.Tab.0.center" timestamp="1589741073009">
+    <state width="1004" height="984" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589886173704" />
+    <state width="1004" height="984" key="GridCell.Tab.0.center" timestamp="1589886173704">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589741073009" />
-    <state width="2005" height="305" key="GridCell.Tab.0.left" timestamp="1589741073009">
+    <state width="1004" height="984" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589886173704" />
+    <state width="1004" height="984" key="GridCell.Tab.0.left" timestamp="1589886173704">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589741073009" />
-    <state width="2005" height="305" key="GridCell.Tab.0.right" timestamp="1589741073009">
+    <state width="1004" height="984" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589886173704" />
+    <state width="1004" height="984" key="GridCell.Tab.0.right" timestamp="1589886173704">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="2005" height="305" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589741073009" />
+    <state width="1004" height="984" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589886173704" />
     <state width="1644" height="305" key="GridCell.Tab.1.bottom" timestamp="1589455949859">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -332,6 +333,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="796" y="260" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589730838563" />
+    <state x="719" y="288" width="609" height="536" key="find.popup" timestamp="1589884621970">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="719" y="288" width="609" height="536" key="find.popup/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589884621970" />
     <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1589740079356">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

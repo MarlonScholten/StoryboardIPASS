@@ -1,68 +1,61 @@
 package nl.marlon;
 
-import java.awt.*;
+import java.io.File;
 import java.util.ArrayList;
 
 public class Media {
-	private String title;
-	private String description;
-	private Image thumbnail;
-	private String notes;
-	private ArrayList<Genre> genres;
+	protected String title;
+	protected String description;
+	protected File thumbnail;
+	protected String notes = "";
+	protected ArrayList<Genre> genres = new ArrayList<>();
 
-	// To do: make constructors for genres or no genres
-
-	// DEV NOTE: An image is required in production! for development there will be a constrcutor without image
-	// Notes are optional
+	// Notes and genres are optional
 
 	// Full constructor
-	public Media(String title, String description, Image thumbnail, String notes) {
+	public Media(String title, String description, File thumbnail, String notes, ArrayList<Genre> genres) {
+		this.title = title;
+		this.description = description;
+		this.thumbnail = thumbnail;
+		this.notes = notes;
+		this.genres = genres;
+	}
+	// Only one genre
+	public Media(String title, String description, File thumbnail, String notes, Genre genre) {
+		this.title = title;
+		this.description = description;
+		this.thumbnail = thumbnail;
+		this.notes = notes;
+		genres.add(genre);
+	}
+	// No Genres
+	public Media(String title, String description, File thumbnail, String notes) {
 		this.title = title;
 		this.description = description;
 		this.thumbnail = thumbnail;
 		this.notes = notes;
 	}
-	// (DEV ONLY) No Thumbnail
-	public Media(String title, String description, String notes) {
+	// No Notes
+	public Media(String title, String description, File thumbnail, ArrayList<Genre> genres) {
 		this.title = title;
 		this.description = description;
-		this.notes = notes;
+		this.thumbnail = thumbnail;
+		this.genres = genres;
 	}
-	// No notes & image
-	public Media(String title, String description) {
+	// No Genres & Notes
+	public Media(String title, String description, File thumbnail) {
 		this.title = title;
 		this.description = description;
-	}
-
-	public String getTitle() {
-		return title;
-	}
-
-	public void setTitle(String title) {
-		this.title = title;
-	}
-
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	public Image getThumbnail() {
-		return thumbnail;
-	}
-
-	public void setThumbnail(Image thumbnail) {
 		this.thumbnail = thumbnail;
 	}
-
-	public String getNotes() {
-		return notes;
-	}
-
-	public void setNotes(String notes) {
-		this.notes = notes;
+	@Override
+	public String toString() {
+		return "Media {"+ '\n' +
+				"title ='" + title + '\n' +
+				"description ='" + description + "\'\n" +
+				"thumbnail =" + thumbnail +
+				"notes ='" + notes + '\n' +
+				"genres =" + genres + '\n' +
+				'}';
 	}
 }
