@@ -1,4 +1,4 @@
-package nl.marlon;
+package nl.marlon.model;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -30,5 +30,12 @@ public class Movie extends Media {
 		super(title, description, thumbnail);
 		this.director = director;
 		this.seen = seen;
+	}
+	@Override
+	public String toString() {
+		return super.toString() +
+				"Type: " + this.getClass().getSimpleName() + "\n" +
+				"Director: " + director + "\n" +
+				"Seen: " + seen + "\n";
 	}
 }

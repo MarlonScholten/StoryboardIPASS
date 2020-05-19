@@ -1,4 +1,4 @@
-package nl.marlon;
+package nl.marlon.model;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -50,12 +50,11 @@ public class Media {
 	}
 	@Override
 	public String toString() {
-		return "Media {"+ '\n' +
-				"title ='" + title + '\n' +
-				"description ='" + description + "\'\n" +
-				"thumbnail =" + thumbnail +
-				"notes ='" + notes + '\n' +
-				"genres =" + genres + '\n' +
-				'}';
+		return "Media:"+ '\n' +
+				"Title = " + title + '\n' +
+				"Description = " + description + "\n" +
+				"Thumbnail = " + thumbnail +"\n" +
+				"Notes = " + notes + '\n' +
+				"Genres = " + genres + '\n';
 	}
 }

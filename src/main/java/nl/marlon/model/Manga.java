@@ -1,4 +1,4 @@
-package nl.marlon;
+package nl.marlon.model;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -6,6 +6,7 @@ import java.util.ArrayList;
 public class Manga extends Media {
 	private int chapter;
 	private String link = "";
+	// Feature idea: track the arc?
 
 	// Full constructor
 	public Manga(String title, String description, File thumbnail, String notes, ArrayList<Genre> genres, int chapter, String link) {
@@ -50,5 +51,13 @@ public class Manga extends Media {
 	public Manga(String title, String description, File thumbnail, int chapter) {
 		super(title, description, thumbnail);
 		this.chapter = chapter;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() +
+				"Type: " + this.getClass().getSimpleName() + "\n" +
+				"Chapter: " + chapter + "\n" +
+				"Link: " + link + "\n";
 	}
 }

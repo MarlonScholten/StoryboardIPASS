@@ -1,27 +1,27 @@
-package nl.marlon;
+package nl.marlon.model;
 
 import javax.print.attribute.standard.Media;
 import java.util.ArrayList;
 
 public class Archive {
-	private Person owner;
+	private User owner;
 	private ArrayList<Media> allMedia = new ArrayList<>();
 
 	// Full constructor
-	public Archive(Person owner, ArrayList<Media> allMedia) {
+	public Archive(User owner, ArrayList<Media> allMedia) {
 		this.owner = owner;
 		this.allMedia = allMedia;
 	}
 
-	public Archive(Person owner) {
+	public Archive(User owner) {
 		this.owner = owner;
 	}
 
-	public Person getOwner() {
+	public User getOwner() {
 		return owner;
 	}
 
-	public void setOwner(Person owner) {
+	public void setOwner(User owner) {
 		this.owner = owner;
 	}
 

@@ -1,4 +1,4 @@
-package nl.marlon;
+package nl.marlon.model;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -86,5 +86,13 @@ public class Book extends Media{
 
 	public void setGenres(ArrayList<Genre> genres) {
 		this.genres = genres;
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() +
+				"Type: " + this.getClass().getSimpleName() + "\n" +
+				"Page: " + page + "\n" +
+				"Author: " + author + "\n";
 	}
 }
