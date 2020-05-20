@@ -7,7 +7,7 @@ public class User {
 	private String email;
 	private String password;
 	private Archive archive;
-	private ArrayList<User> allUsers = new ArrayList<>();
+	private static ArrayList<User> allUsers = new ArrayList<>();
 
 	// Full constructor
 	public User(String username, String email, String password, Archive archive) {
@@ -65,6 +65,14 @@ public class User {
 			}
 		}
 		return null;
+	}
+
+	public static ArrayList<User> getAllUsers() {
+		return allUsers;
+	}
+
+	public void setAllUsers(ArrayList<User> allUsers) {
+		this.allUsers = allUsers;
 	}
 
 	@Override
