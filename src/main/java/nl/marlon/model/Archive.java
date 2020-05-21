@@ -1,7 +1,9 @@
 package nl.marlon.model;
 
-import javax.print.attribute.standard.Media;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
+import nl.marlon.model.Media;
+
 
 public class Archive {
 	private User owner;
@@ -17,6 +19,7 @@ public class Archive {
 		this.owner = owner;
 	}
 
+	@JsonIgnore
 	public User getOwner() {
 		return owner;
 	}
@@ -27,5 +30,15 @@ public class Archive {
 
 	public ArrayList<Media> getAllMedia() {
 		return allMedia;
+	}
+
+	public boolean addMedia(Object obj) {
+		if(obj instanceof Media){
+			Media media = (Media) obj;
+			allMedia.add(media);
+			return true;
+		} else{
+			return false;
+		}
 	}
 }

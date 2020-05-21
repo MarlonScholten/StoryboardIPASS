@@ -31,6 +31,23 @@ public class Show extends Media {
 		this.season = season;
 		this.episode = episode;
 	}
+
+	public int getSeason() {
+		return season;
+	}
+
+	public void setSeason(int season) {
+		this.season = season;
+	}
+
+	public int getEpisode() {
+		return episode;
+	}
+
+	public void setEpisode(int episode) {
+		this.episode = episode;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() +

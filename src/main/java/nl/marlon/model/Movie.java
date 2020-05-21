@@ -31,6 +31,23 @@ public class Movie extends Media {
 		this.director = director;
 		this.seen = seen;
 	}
+
+	public String getDirector() {
+		return director;
+	}
+
+	public void setDirector(String director) {
+		this.director = director;
+	}
+
+	public boolean isSeen() {
+		return seen;
+	}
+
+	public void setSeen(boolean seen) {
+		this.seen = seen;
+	}
+
 	@Override
 	public String toString() {
 		return super.toString() +

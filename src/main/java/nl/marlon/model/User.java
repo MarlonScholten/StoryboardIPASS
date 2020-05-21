@@ -1,24 +1,23 @@
 package nl.marlon.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class User {
+	private int id;
 	private String username;
 	private String email;
 	private String password;
 	private Archive archive;
+	private static int numUsers = 0;
+	@JsonIgnore
 	private static ArrayList<User> allUsers = new ArrayList<>();
 
-	// Full constructor
-	public User(String username, String email, String password, Archive archive) {
-		this.username = username;
-		this.email = email;
-		this.password = password;
-		this.archive = archive;
-		allUsers.add(this);
-	}
 	// No archive
 	public User(String username, String email, String password) {
+		this.id = ++numUsers;
 		this.username = username;
 		this.email = email;
 		this.password = password;
@@ -58,7 +57,30 @@ public class User {
 		this.archive = archive;
 	}
 
-	public User getUserByEmail(String email){
+	public static ArrayList<User> getAllUsers() {
+		return allUsers;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public static int getNumUsers() {
+		return numUsers;
+	}
+
+	public static User createUser(String username, String email, String password){
+		if(allUsers.stream().noneMatch(e->e.getEmail().equals(email))){
+			return new User(username, email, password);
+		}
+		return null;
+	}
+
+	public void setAllUsers(ArrayList<User> allUsers) {
+		this.allUsers = allUsers;
+	}
+
+	public static User getUserByEmail(String email){
 		for(User user : allUsers){
 			if(user.email.equals(email)){
 				return user;
@@ -66,13 +88,29 @@ public class User {
 		}
 		return null;
 	}
-
-	public static ArrayList<User> getAllUsers() {
-		return allUsers;
+	public static User getUserById(int id){
+		for(User user : allUsers){
+			if(user.id == id){
+				return user;
+			}
+		}
+		return null;
 	}
 
-	public void setAllUsers(ArrayList<User> allUsers) {
-		this.allUsers = allUsers;
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		User user = (User) o;
+		return username.equals(user.username) &&
+				email.equals(user.email) &&
+				password.equals(user.password) &&
+				archive.equals(user.archive);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, username, email, password, archive);
 	}
 
 	@Override

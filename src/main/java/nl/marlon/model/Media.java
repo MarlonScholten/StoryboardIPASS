@@ -48,6 +48,47 @@ public class Media {
 		this.description = description;
 		this.thumbnail = thumbnail;
 	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public File getThumbnail() {
+		return thumbnail;
+	}
+
+	public void setThumbnail(File thumbnail) {
+		this.thumbnail = thumbnail;
+	}
+
+	public String getNotes() {
+		return notes;
+	}
+
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
+
+	public ArrayList<Genre> getGenres() {
+		return genres;
+	}
+
+	public void setGenres(ArrayList<Genre> genres) {
+		this.genres = genres;
+	}
+
 	@Override
 	public String toString() {
 		return "Media:"+ '\n' +
