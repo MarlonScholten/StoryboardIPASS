@@ -2,15 +2,19 @@ package nl.marlon.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import javax.annotation.security.RolesAllowed;
+import javax.security.auth.Subject;
+import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Objects;
 
-public class User {
+public class User implements Principal {
 	private int id;
 	private String username;
 	private String email;
 	private String password;
 	private Archive archive;
+	private String role;
 	private static int numUsers = 0;
 	@JsonIgnore
 	private static ArrayList<User> allUsers = new ArrayList<>();
@@ -69,6 +73,14 @@ public class User {
 		return numUsers;
 	}
 
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
 	public static User createUser(String username, String email, String password){
 		if(allUsers.stream().noneMatch(e->e.getEmail().equals(email))){
 			return new User(username, email, password);
@@ -105,6 +117,10 @@ public class User {
 		return false;
 	}
 
+	public static boolean checkPassword(String password){
+
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
@@ -119,6 +135,11 @@ public class User {
 	@Override
 	public int hashCode() {
 		return Objects.hash(id, username, email, password, archive);
+	}
+
+	@Override
+	public String getName() {
+		return null;
 	}
 
 	@Override
