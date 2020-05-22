@@ -97,6 +97,14 @@ public class User {
 		return null;
 	}
 
+	public static boolean checkCredentials(String email, String password){
+		User target = getUserByEmail(email);
+		if(target.getPassword().equals(password)){
+			return true;
+		}
+		return false;
+	}
+
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
