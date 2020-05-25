@@ -1,9 +1,9 @@
 package nl.marlon.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import nl.marlon.Exceptions.UnauthorizedException;
 
 import javax.annotation.security.RolesAllowed;
-import javax.security.auth.Subject;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -45,6 +45,7 @@ public class User implements Principal {
 		this.email = email;
 	}
 
+	@JsonIgnore
 	public String getPassword() {
 		return password;
 	}
@@ -75,7 +76,7 @@ public class User implements Principal {
 
 	public String getRole() {
 		return role;
-	}
+}
 
 	public void setRole(String role) {
 		this.role = role;
@@ -92,13 +93,14 @@ public class User implements Principal {
 		this.allUsers = allUsers;
 	}
 
-	public static User getUserByEmail(String email){
+	@RolesAllowed("user")
+	public static User getUserByEmail(String email) throws UnauthorizedException{
 		for(User user : allUsers){
 			if(user.email.equals(email)){
 				return user;
 			}
 		}
-		return null;
+		throw new UnauthorizedException("Not authorized for method getUserByEmail");
 	}
 	public static User getUserById(int id){
 		for(User user : allUsers){
@@ -109,7 +111,7 @@ public class User implements Principal {
 		return null;
 	}
 
-	public static boolean checkCredentials(String email, String password){
+	public static boolean checkCredentials(String email, String password) throws UnauthorizedException {
 		User target = getUserByEmail(email);
 		if(target.getPassword().equals(password)){
 			return true;
@@ -117,8 +119,11 @@ public class User implements Principal {
 		return false;
 	}
 
-	public static boolean checkPassword(String password){
-
+	public boolean checkPassword(String password){
+		if(this.password.equals(password)){
+			return true;
+		}
+		return false;
 	}
 
 	@Override

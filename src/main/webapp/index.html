@@ -17,7 +17,7 @@
 			<div id="login-form-container">
 				<h1>Log in to <span class="teal-main">Storyboard</span></h1>
 				<h4>A valid account is required</h4>
-				<form id="login-form" onsubmit="login()">
+				<form id="login-form" method="POST">
 					<label for="email">Username or Email:</label>
 					<input type="text" id="email" name="email" placeholder="">
 					<label for="password">Password:</label>
@@ -33,18 +33,24 @@
 </body>
 <script type="text/javascript">
 	function login(event){
-		var formData = new FormData(document.querySelector("#loginform"));
+		var formData = new FormData(document.querySelector("#login-form"));
 		var encData = new URLSearchParams(formData.entries());
 
-		console.log(formData);
+		event.preventDefault();
 
-		fetch("rest/authentication", {method:'POST', body: encData})
+		fetch("rest/authenticate", {method:'POST', body: encData})
 			.then(function(response){
 				if(response.ok) return response.json();
 				else throw "Wrong email/password";
 			})
-			.then(myJson => window.sessionStorage.setItem("myJWT", myJson.JWT))
+			.then(myJson => {
+				window.sessionStorage.clear()
+				console.log("Triggered")
+				window.sessionStorage.setItem("myJWT", myJson.JWT)
+			})
+			// window.location href- andere pagina verwijzen.
 			.catch(error => console.log(error));
 	}
+	document.querySelector("#login-submit").addEventListener("click", login);
 </script>
 </html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+</head>
+<body>
+<h1>dashboard</h1>
+
+</body>
+<script type="text/javascript">
+	var fetchoptions = {
+		method:'GET',
+		headers: {
+			'Authorization' : 'Bearer ' + window.sessionStorage.getItem("myJWT")
+		}
+	}
+
+	fetch("rest/user", fetchoptions)
+	.then(function (response){
+		if(response.ok) return response.json();
+		else if(response.status==404) console.log("customer not found")
+		else if(response.status==401) console.log("unauthorized")
+	}).then(myJson => console.log(myJson))
+		.catch(error => console.log(error));
+</script>
+</html>

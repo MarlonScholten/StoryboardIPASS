@@ -3,6 +3,7 @@ package nl.marlon.webservices;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.impl.crypto.MacProvider;
+import nl.marlon.Exceptions.UnauthorizedException;
 import nl.marlon.model.User;
 
 import javax.ws.rs.*;
@@ -31,12 +32,12 @@ public class AuthenticationResource {
 	public Response login(@FormParam("email") String email, @FormParam("password") String password) {
 		User user;
 		try {
-			user = User.getUserByEmail(email);//Dit is mijn functie
+			user = User.getUserByEmail(email);
 		} catch (UnauthorizedException e) {
 			return Response.status(Response.Status.UNAUTHORIZED).build();
 		}
 		if(user.checkPassword(password)) {
-			String token=createToken(user.getId(),user.getRole());
+			String token=createToken(String.valueOf(user.getId()),user.getRole());
 			AbstractMap.SimpleEntry<String, String> JWT=new AbstractMap.SimpleEntry<>("JWT",token);
 			return Response.ok(JWT).build();
 		} else {
