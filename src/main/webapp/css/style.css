@@ -1,24 +1,5 @@
-/*Begin General styles*/
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-label {
-    color: white;
-    font-family: "Roboto", sans-serif;
-}
-.no-pad{
-    padding:0px !important;
-}
-.full-container{
-    display:flex;
-    height: 100vh;
-    width: 100vw;
-}
-/*End General styles*/
+@import url("general.css");
+@import url("colors.css");
 
 /*Begin login form*/
 #login-form-container{
@@ -102,9 +83,3 @@ input#login-submit:hover{
     height:100%;
 }
 /*End login page*/
-
-/*Begin Color definition*/
-.teal-main{
-    color:#00695C;
-}
-/*End color definition*/
