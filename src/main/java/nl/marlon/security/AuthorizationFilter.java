@@ -31,8 +31,6 @@ public class AuthorizationFilter implements ContainerRequestFilter {
 				JwtParser parser= Jwts.parser().setSigningKey(AuthenticationResource.key);
 				Claims claims=parser.parseClaimsJws(token).getBody();
 				String user=claims.getSubject();
-				System.out.println(User.getUserById(
-						Integer.parseInt(user)));
 				msc=new MySecurityContext(User.getUserById(Integer.parseInt(user)),scheme);
 			} catch (JwtException | IllegalArgumentException e) {
 				e.printStackTrace();

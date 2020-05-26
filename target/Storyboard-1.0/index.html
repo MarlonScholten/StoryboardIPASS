@@ -45,10 +45,9 @@
 			})
 			.then(myJson => {
 				window.sessionStorage.clear()
-				console.log("Triggered")
 				window.sessionStorage.setItem("myJWT", myJson.JWT)
+				window.location.assign("/dashboard.html");
 			})
-			// window.location href- andere pagina verwijzen.
 			.catch(error => console.log(error));
 	}
 	document.querySelector("#login-submit").addEventListener("click", login);
