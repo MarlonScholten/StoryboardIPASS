@@ -2,7 +2,6 @@ package nl.marlon.webservices;
 
 import nl.marlon.Exceptions.UnauthorizedException;
 import nl.marlon.model.User;
-import nl.marlon.security.MySecurityContext;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;

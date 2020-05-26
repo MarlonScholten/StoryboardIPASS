@@ -5,7 +5,6 @@ import nl.marlon.model.User;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-import java.util.AbstractMap;
 import java.util.List;
 
 @Path("users")

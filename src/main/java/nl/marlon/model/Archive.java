@@ -2,7 +2,6 @@ package nl.marlon.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.util.ArrayList;
-import nl.marlon.model.Media;
 
 
 public class Archive {
