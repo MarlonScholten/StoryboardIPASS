@@ -67,7 +67,7 @@ input#login-submit:hover{
 /*Begin login page*/
 #login-bg-container {
     height: 100%;
-    background-image:url("../images/storyboard-bg.jpg");
+    background-image:url("../../images/storyboard-bg.jpg");
     background-repeat:no-repeat;
     background-size: cover;
     background-position: 50%,0px;
