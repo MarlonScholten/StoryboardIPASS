@@ -5,26 +5,14 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap-grid.min.css">
+	<script type="module" src="js/UserService.js"></script>
 	<title>Dashboard</title>
 </head>
 <body>
-<h1>Dashboard van </h1>
+<main class="col-12">
+	<section id="nav-container" class="col-3 col-sm-3 col-md-3">
 
+	</section>
+</main>
 </body>
-<script type="text/javascript">
-	const fetchoptions = {
-		method: 'GET',
-		headers: {
-			'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
-		}
-	};
-
-	fetch("rest/user", fetchoptions)
-	.then(function (response){
-		if(response.ok) return response.json();
-		else if(response.status==404) console.log("customer not found")
-		else if(response.status==401) console.log("unauthorized")
-	}).then(myJson => myJson)
-		.catch(error => console.log(error));
-</script>
 </html>
