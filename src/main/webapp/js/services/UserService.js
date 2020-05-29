@@ -14,9 +14,9 @@ async function getUser(){
 		}).then(myJson => myJson)
 		.catch(error => console.log(error));
 }
-getUser().then(user=>{
-	let media = Object.values(user.archive)[0];
-	for(let i=0; i < media.length; i++){
-		console.log(media[i])
-	}
-});
+// getUser().then(user=>{
+// 	let media = Object.values(user.archive)[0];
+// 	for(let i=0; i < media.length; i++){
+// 		console.log(media[i])
+// 	}
+// });

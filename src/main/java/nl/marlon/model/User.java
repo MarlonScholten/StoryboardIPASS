@@ -144,7 +144,7 @@ public class User implements Principal {
 
 	@Override
 	public String getName() {
-		return null;
+		return email;
 	}
 
 	@Override

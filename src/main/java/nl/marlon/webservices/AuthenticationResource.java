@@ -18,7 +18,7 @@ public class AuthenticationResource {
 	final static public Key key= MacProvider.generateKey();
 	private String createToken(String userId,String role) {
 		Calendar expiration=Calendar.getInstance();
-		expiration.add(Calendar.MINUTE,30);
+		expiration.add(Calendar.MINUTE,60);
 		return Jwts.builder()
 				.setSubject(userId)
 				.setExpiration(expiration.getTime())
