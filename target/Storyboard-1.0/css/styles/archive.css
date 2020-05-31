@@ -1,0 +1,17 @@
+#media-container{
+    background-color:#3f3f3f;
+    padding:40px;
+    display:flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+
+}
+#media-container .card{
+    height: 270px;
+    width: 180px;
+    margin: 12px;
+    transition: all ease-in-out 0.1s;
+}#media-container .card:hover{
+     transform:scale(1.02);
+    cursor:pointer;
+ }

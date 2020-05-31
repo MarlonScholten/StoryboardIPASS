@@ -7,30 +7,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b138f14a-b5ee-4dc8-b361-3902bb01afeb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/AnimeResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/BookResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/MangaResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/MovieResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/ShowResource.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/styles/dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/js/services/MenuService.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/styles/archive.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/styles/menu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/model/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/AuthenticationResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/AuthenticationResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/setup/JerseyConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles/colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles/colors.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles/dashboard.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/services/UserService.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/services/MenuService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/services/MenuService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/services/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/services/UserService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/webservices/AuthenticationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/webservices/AuthenticationResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/setup/JerseyConfig.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/css/styles/colors.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/css/styles/colors.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/css/styles/general.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/css/styles/general.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/css/styles/dashboard.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/dashboard.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/js/UserService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/marlon/model/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/marlon/model/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/js/services/MenuService.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/js/services/MenuService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/js/services/UserService.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/js/services/UserService.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/nl/marlon/webservices/AuthenticationResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/marlon/webservices/AuthenticationResource.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/setup/JerseyConfig.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,9 +39,10 @@
         <option value="Arquillian JUnit Test Class" />
         <option value="JUnit5 Test Class" />
         <option value="HTML File" />
-        <option value="CSS File" />
         <option value="Class" />
         <option value="JavaScript File" />
+        <option value="package.json" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -91,6 +88,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../HotelApp" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.importing" />
   </component>
   <component name="RecentsManager">
@@ -320,7 +318,9 @@
       <workItem from="1590589591397" duration="402000" />
       <workItem from="1590590016711" duration="1712000" />
       <workItem from="1590672242844" duration="5611000" />
-      <workItem from="1590742785925" duration="20150000" />
+      <workItem from="1590742785925" duration="20245000" />
+      <workItem from="1590921701527" duration="5339000" />
+      <workItem from="1590928120557" duration="9153000" />
     </task>
     <servers />
   </component>
@@ -351,54 +351,54 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="312" key="FileChooserDialogImpl/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589789942275" />
-    <state width="1644" height="292" key="GridCell.Tab.0.bottom" timestamp="1590762292878">
+    <state width="1644" height="292" key="GridCell.Tab.0.bottom" timestamp="1590928103727">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1644" height="292" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590762292878" />
-    <state width="1644" height="292" key="GridCell.Tab.0.center" timestamp="1590762292878">
+    <state width="1644" height="292" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590928103727" />
+    <state width="1644" height="292" key="GridCell.Tab.0.center" timestamp="1590928103727">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1644" height="292" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590762292878" />
-    <state width="1644" height="292" key="GridCell.Tab.0.left" timestamp="1590762292878">
+    <state width="1644" height="292" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590928103727" />
+    <state width="1644" height="292" key="GridCell.Tab.0.left" timestamp="1590928103727">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1644" height="292" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590762292878" />
-    <state width="1644" height="292" key="GridCell.Tab.0.right" timestamp="1590762292878">
+    <state width="1644" height="292" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590928103727" />
+    <state width="1644" height="292" key="GridCell.Tab.0.right" timestamp="1590928103727">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1644" height="292" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590762292878" />
-    <state width="1644" height="292" key="GridCell.Tab.1.bottom" timestamp="1590762292713">
+    <state width="1644" height="292" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590928103727" />
+    <state width="1644" height="292" key="GridCell.Tab.1.bottom" timestamp="1590928103727">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1644" height="292" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590762292713" />
-    <state width="1644" height="292" key="GridCell.Tab.1.center" timestamp="1590762292713">
+    <state width="1644" height="292" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590928103727" />
+    <state width="1644" height="292" key="GridCell.Tab.1.center" timestamp="1590928103727">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1644" height="292" key="GridCell.Tab.1.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590762292713" />
-    <state width="1644" height="292" key="GridCell.Tab.1.left" timestamp="1590762292713">
+    <state width="1644" height="292" key="GridCell.Tab.1.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590928103727" />
+    <state width="1644" height="292" key="GridCell.Tab.1.left" timestamp="1590928103727">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1644" height="292" key="GridCell.Tab.1.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590762292713" />
-    <state width="1644" height="292" key="GridCell.Tab.1.right" timestamp="1590762292713">
+    <state width="1644" height="292" key="GridCell.Tab.1.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590928103727" />
+    <state width="1644" height="292" key="GridCell.Tab.1.right" timestamp="1590928103727">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1644" height="292" key="GridCell.Tab.1.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590762292713" />
-    <state width="1644" height="292" key="GridCell.Tab.2.bottom" timestamp="1590762292713">
+    <state width="1644" height="292" key="GridCell.Tab.1.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590928103727" />
+    <state width="1644" height="292" key="GridCell.Tab.2.bottom" timestamp="1590928103727">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1644" height="292" key="GridCell.Tab.2.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590762292713" />
-    <state width="1644" height="292" key="GridCell.Tab.2.center" timestamp="1590762292713">
+    <state width="1644" height="292" key="GridCell.Tab.2.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590928103727" />
+    <state width="1644" height="292" key="GridCell.Tab.2.center" timestamp="1590928103727">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1644" height="292" key="GridCell.Tab.2.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590762292713" />
-    <state width="1644" height="292" key="GridCell.Tab.2.left" timestamp="1590762292713">
+    <state width="1644" height="292" key="GridCell.Tab.2.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590928103727" />
+    <state width="1644" height="292" key="GridCell.Tab.2.left" timestamp="1590928103727">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1644" height="292" key="GridCell.Tab.2.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590762292713" />
-    <state width="1644" height="292" key="GridCell.Tab.2.right" timestamp="1590762292713">
+    <state width="1644" height="292" key="GridCell.Tab.2.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590928103727" />
+    <state width="1644" height="292" key="GridCell.Tab.2.right" timestamp="1590928103727">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1644" height="292" key="GridCell.Tab.2.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590762292713" />
+    <state width="1644" height="292" key="GridCell.Tab.2.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590928103727" />
     <state x="571" y="224" key="Maven.ArtifactSearchDialog" timestamp="1590398472921">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -407,6 +407,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="533" y="199" key="SettingsEditor/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590055498186" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1590924388093">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590924388093" />
     <state x="834" y="474" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1588865318061">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -427,9 +431,9 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="681" y="259" key="run.anything.popup/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590671760464" />
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1590754567310">
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1590934058257">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590754567310" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590934058257" />
   </component>
 </project>

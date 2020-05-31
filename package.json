@@ -1,0 +1,7 @@
+{
+  "name": "Storyboard",
+  "version": "1.0.0",
+  "dependencies": {
+    "services": "0.0.3"
+  }
+}
