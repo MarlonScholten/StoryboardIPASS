@@ -13,6 +13,13 @@
     align-items: center;
     justify-content: center;
     height:40px;
+    margin-bottom:5px;
+}
+#main-nav > a.active{
+    background-color:#3e3e3e;
+}
+#main-nav > a.active span{
+    color:#fff;
 }
 #main-nav > a:hover {
     background-color:#3e3e3e;
@@ -30,7 +37,4 @@
     font-weight:400;
     margin-bottom:0px;
     text-align:center;
-}
-#main-title-container > h2 span{
-    /*color:#fff;*/
 }

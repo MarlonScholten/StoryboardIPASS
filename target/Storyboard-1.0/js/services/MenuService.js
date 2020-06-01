@@ -24,6 +24,23 @@ function populateMenu(){
 		})
 	})
 }
+function clearActiveStates(){
+	let allMenuItems = document.querySelector("#main-nav").children;
+	for(let i=0; i<allMenuItems.length;i++){
+		allMenuItems[i].classList.remove("active");
+	}
+}
+function switchCat(cat){
+	let targetCat = cat.currentTarget.targetCat;
+	let menuItem = document.querySelector("." + targetCat+"-menu-item");
+	clearActiveStates();
+	menuItem.classList.add("active");
+}
+function defaultActive(){
+	let allMenuItems = document.querySelector("#main-nav").children;
+	clearActiveStates();
+	allMenuItems[0].classList.add("active");
+}
 populateMenu().then(myCats => {
 	const navTemp = document.querySelector("#nav-template");
 	let target =  document.querySelector("#main-nav");
@@ -31,7 +48,14 @@ populateMenu().then(myCats => {
 	for(let i=0; i<myCats.length;i++){
 		let tempContent = navTemp.content.cloneNode(true);
 		let label = tempContent.querySelector(".nav-label");
+		let href = tempContent.querySelector(".menu-href");
+
 		label.innerText = (myCats[i]);
+		href.classList.add(myCats[i] + "-menu-item");
+		href.classList.add("unselectable")
+		href.addEventListener("click", switchCat, false);
+		href.targetCat = myCats[i];
 		target.appendChild(tempContent);
 	}
+	defaultActive();
 });

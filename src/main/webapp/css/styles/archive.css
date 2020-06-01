@@ -4,7 +4,84 @@
     display:flex;
     flex-wrap: wrap;
     align-content: flex-start;
-
+    position: relative;
+}
+#add-media-modal{
+    padding:20px;
+    position: absolute;
+    left: 0;
+    right: 20%;
+    margin:auto;
+    top: 0;
+    bottom:20%;
+    width:700px;
+    height:640px;
+    background-color:#fff;
+    border-radius:3px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.2s ease-in-out;
+}
+#add-media-modal .image-holder{
+    background-color:#ededed;
+    width: 100%;
+    height:300px;
+    border-radius: 3px;
+    display: flex;
+    align-items: flex-end;
+}
+#add-media-modal .image-holder input{
+    font-size:12px;
+    max-width:80%;
+    margin: 0 auto 10px;
+}
+#add-media-modal #title{
+    margin-bottom:25px;
+}
+#add-media-modal input[type=text],
+#add-media-modal textarea{
+    width:100%;
+    border: 1px solid #9a9a9a;
+    border-radius: 2px;
+    padding: 4px 8px;
+}
+#add-media-modal #add-media-form section:nth-of-type(1){
+    margin-bottom:30px;
+}
+#add-media-modal #add-media-form section:nth-of-type(2){
+    margin-bottom:30px;
+}
+#add-media-modal #add-media-form .button-holder {
+    text-align:right;
+}
+#add-media-modal #add-media-form input.save,
+#add-media-modal #add-media-form input.cancel{
+    width:100px;
+    padding:8px 5px;
+    font-size:13px;
+    border: none;
+    border-radius: 2px;
+}
+#add-media-modal #add-media-form input.save{
+    background-color:#00695C;
+    color:#fff;
+    margin-left:10px;
+}
+#add-media-modal #add-media-form input.cancel{
+    background-color:#ededed;
+}
+#add-media-modal input[type=text]:focus,
+#add-media-modal textarea:focus{
+    outline: 1px solid #616161;
+}
+#add-media-modal textarea{
+    resize: none;
+    height:80%;
+    font-size:11px;
+}
+#add-media-modal .notes-area{
+    height:200px;
 }
 #media-container .card{
     height: 270px;
@@ -13,5 +90,56 @@
     transition: all ease-in-out 0.1s;
 }#media-container .card:hover{
      transform:scale(1.02);
-    cursor:pointer;
+     cursor:pointer;
  }
+#media-container .card:active{
+     transform:scale(1);
+ }
+ #media-container #add-media{
+     background-color:transparent;
+     border:2px dashed #00796B;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+ }
+#media-container #add-media:before{
+    content:"\f0fe";
+    display:block;
+    font-size:24px;
+    font-family: "FontAwesome", serif;
+    margin-bottom:10px;
+}
+#media-container #add-media:before,
+#media-container #add-media h4{
+    color:#00796B;
+}
+#media-container #add-media h4{
+    font-weight:400;
+}
+#media-details-container label{
+    margin-bottom:10px;
+    font-size:14px;
+}
+#media-details-container input {
+    font-size:13px;
+}
+#media-details-container label{
+    width:calc(100% - 65px);
+}
+#media-details-container input[type="number"]{
+    width:60px;
+}
+#media-details-container.details-anime label:nth-of-type(3),
+#media-details-container.details-manga label:nth-of-type(2){
+    width:22%;
+}
+#media-details-container.details-anime input:nth-of-type(3),
+#media-details-container.details-manga input:nth-of-type(2){
+    width:75%;
+}
+#media-details-container.details-books label:nth-of-type(1){
+    width:30%;
+}
+#media-details-container.details-books input:nth-of-type(1){
+    width:70%;
+}

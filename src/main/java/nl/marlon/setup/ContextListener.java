@@ -13,6 +13,7 @@ public class ContextListener implements ServletContextListener {
 
 	public void contextInitialized(ServletContextEvent sce){
 		User marlon = new User("Marlon", "marlon_scholten@live.nl", "123");
+		User demo = new User("Demo", "demo", "123");
 
 		File braveImg = new File("src/main/webapp/images/brave-new-world.jpg");
 
@@ -23,10 +24,16 @@ public class ContextListener implements ServletContextListener {
 		bravegenres.add(thriller);
 
 		Book bravenewworld = new Book("Brave new world", "A sci-fi thriller with interesting characters and a more interesting world", braveImg,"Very cool", bravegenres, 23, "Aldous Huxley");
-		Anime psychopass = new Anime("Psycho Pass", "A sci-fi police thriller", braveImg, "pretty gory", bravegenres, 2, 4, "https://www1.animeultima.to/a/psycho-pass-2_481893");
+//		Anime psychopass = new Anime("Psycho Pass", "A sci-fi police thriller", braveImg, "pretty gory", bravegenres, 2, 4, "https://www1.animeultima.to/a/psycho-pass-2_481893");
+//		Movie goodwillhunting =  new Movie("Good Will Hunting", "A movie about a kid who is too smart", braveImg, "Gus Van Sant", true);
+//		Manga onepiece = new Manga("One Piece", "A boy named luffy wants to become the pirate king", braveImg, 244, "https://mangaplus.shueisha.co.jp/titles/100020");
+//		Show vikings = new Show("Vikings", "badassery", braveImg, 2, 12);
 
-		marlon.getArchive().addMedia(bravenewworld);
-		marlon.getArchive().addMedia(psychopass);
+		demo.getArchive().addMedia(bravenewworld);
+//		marlon.getArchive().addMedia(psychopass);
+//		marlon.getArchive().addMedia(goodwillhunting);
+//		marlon.getArchive().addMedia(onepiece);
+//		marlon.getArchive().addMedia(vikings);
 	}
 	public void contextDestroyed(ServletContextEvent sce){
 
