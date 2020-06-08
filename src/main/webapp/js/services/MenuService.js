@@ -52,7 +52,7 @@ populateMenu().then(myCats => {
 
 		label.innerText = (myCats[i]);
 		href.classList.add(myCats[i] + "-menu-item");
-		href.classList.add("unselectable")
+		href.classList.add("unselectable");
 		href.addEventListener("click", switchCat, false);
 		href.targetCat = myCats[i];
 		target.appendChild(tempContent);

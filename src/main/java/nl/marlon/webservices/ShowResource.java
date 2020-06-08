@@ -33,4 +33,16 @@ public class ShowResource {
 		}
 		return Response.ok(allShows).build();
 	}
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response addNewMovie(@Context SecurityContext msc,
+								@FormParam("watched") boolean watched) throws UnauthorizedException {
+
+		if(msc == null){
+			return Response.status(409).build();
+		}
+		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
+		System.out.println(watched);
+		return Response.ok(user).build();
+	}
 }

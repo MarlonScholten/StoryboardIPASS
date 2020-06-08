@@ -93,7 +93,7 @@ public class User implements Principal {
 		this.allUsers = allUsers;
 	}
 
-	@RolesAllowed("user")
+//	@RolesAllowed("user")
 	public static User getUserByEmail(String email) throws UnauthorizedException{
 		for(User user : allUsers){
 			if(user.email.equals(email)){

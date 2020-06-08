@@ -15,88 +15,67 @@ function openModal(){
 	modal.style.visibility = "visible";
 	modal.style.opacity = "1";
 }
-function createSeasonLabel(){
-	let seasonlabel = document.createElement("label");
-	seasonlabel.setAttribute("for", "season");
-	seasonlabel.innerText = "Season";
-	return seasonlabel;
+function createLabelFor(name){
+	let label = document.createElement("label");
+	label.setAttribute("for", name);
+	label.innerText = name;
+	return label;
 }
-function createSeasonInput(){
-	let seasoninput = document.createElement("input");
-	seasoninput.setAttribute("type", "number");
-	seasoninput.id = "season";
-	seasoninput.setAttribute("placeholder", "0");
-	return seasoninput;
+function createNumberInput(name){
+	let numberInput = document.createElement("input");
+	numberInput.setAttribute("type", "number");
+	numberInput.setAttribute("placeholder", "0");
+	numberInput.setAttribute("name", name);
+	numberInput.id = name;
+	return numberInput;
 }
-function createEpisodeLabel(){
-	let episodelabel = document.createElement("label");
-	episodelabel.setAttribute("for", "episode");
-	episodelabel.innerText = "Episode";
-	return episodelabel;
-}
-function createEpisodeInput(){
-	let episodeinput = document.createElement("input");
-	episodeinput.setAttribute("type", "number");
-	episodeinput.id = "episode";
-	episodeinput.setAttribute("placeholder", "0");
-	return episodeinput;
-}
-function createLinkLabel(){
-	let linklabel = document.createElement("label");
-	linklabel.setAttribute("for", "link");
-	linklabel.innerText = "Link";
-	return linklabel;
-}
-function createLinkInput(){
-	let linkinput = document.createElement("input");
-	linkinput.setAttribute("type", "text");
-	linkinput.id = "link";
-	linkinput.setAttribute("placeholder", "No link");
-	return linkinput;
-}
-function createPageLabel(){
-	let pagelabel = document.createElement("label");
-	pagelabel.setAttribute("for", "page");
-	pagelabel.innerText = "Page";
-	return pagelabel;
-}
-function createPageInput(){
-	let pageinput = document.createElement("input");
-	pageinput.setAttribute("type", "number");
-	pageinput.id = "page";
-	pageinput.setAttribute("placeholder", "0");
-	return pageinput;
-}
-function createAuthorLabel(){
-	let authorlabel = document.createElement("label");
-	authorlabel.setAttribute("for", "author");
-	authorlabel.innerText = "Author";
-	return authorlabel;
-}
-function createAuthorInput(){
-	let authorinput = document.createElement("input");
-	authorinput.setAttribute("type", "text");
-	authorinput.id = "author";
-	authorinput.setAttribute("placeholder", "No author");
-	return authorinput;
-}
-function createChapterLabel(){
-	let chapterlabel = document.createElement("label");
-	chapterlabel.setAttribute("for", "chapter");
-	chapterlabel.innerText = "Chapter";
-	return chapterlabel;
-}
-function createChapterInput(){
-	let chapterinput = document.createElement("input");
-	chapterinput.setAttribute("type", "number");
-	chapterinput.id = "chapter";
-	chapterinput.setAttribute("placeholder", "0");
-	return chapterinput;
+function createTextInput(name){
+	let textInput = document.createElement("input");
+	textInput.setAttribute("type", "text");
+	textInput.setAttribute("placeholder", "No " + name);
+	textInput.id = name;
+	return textInput;
 }
 function createHiddenType(){
 	let typeInput = document.createElement("input");
 	typeInput.setAttribute("type", "hidden");
+	typeInput.setAttribute("name", "type");
+	typeInput.setAttribute("id", "type");
 	return typeInput;
+}
+function createCheckBox(name){
+	let checkbox = document.createElement("input");
+	checkbox.setAttribute("type", "checkbox");
+	checkbox.setAttribute("value", "true");
+	checkbox.setAttribute("name", name);
+	checkbox.id = name;
+	return checkbox;
+}
+function createCheckBoxHidden(name){
+	let boxHidden = document.createElement("input");
+	boxHidden.setAttribute("type", "hidden");
+	boxHidden.setAttribute("value", "false");
+	boxHidden.setAttribute("name", name);
+	boxHidden.id = name;
+	return boxHidden;
+}
+function postFormTo(resource){
+	let formData = new FormData(document.querySelector("#add-media-form"));
+	let encData = new URLSearchParams(formData.entries());
+
+	const fetchoptions = {
+		method: 'POST',
+		headers: {
+			'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
+		},
+		body:encData
+	};
+
+	return fetch("rest/user/"+resource, fetchoptions,)
+		.then(function (response){
+			if(response.ok) return response.json();
+			else if(response.status===401) console.log("unauthorized")
+		}).then(myJson => myJson)
 }
 function addMedia(){
 	let allMenuItems = document.querySelector("#main-nav").children;
@@ -118,47 +97,64 @@ function addMedia(){
 	detailsContainer.classList.add("col-4");
 
 	let hidden = createHiddenType();
-	hidden.setAttribute("name", "type");
-	hidden.setAttribute("id", "type");
 	switch(currentCat) {
 		case "anime":
-			detailsContainer.classList.add("details-"+currentCat);
 			hidden.setAttribute("value", currentCat);
 			detailsContainer.append(
-				createSeasonLabel(),
-				createSeasonInput(),
-				createEpisodeLabel(),
-				createEpisodeInput(),
-				createLinkLabel(),
-				createLinkInput(),
-				hidden);
+				createLabelFor("season"),
+				createNumberInput("season"),
+				createLabelFor("episode"),
+				createNumberInput("episode"),
+				createLabelFor("link"),
+				createTextInput("link"),
+				hidden
+			);
 			break;
 		case "books":
-			detailsContainer.classList.add("details-"+currentCat);
 			hidden.setAttribute("value", currentCat);
 			detailsContainer.append(
-				createAuthorLabel(),
-				createAuthorInput(),
-				createPageLabel(),
-				createPageInput(),
+				createLabelFor("author"),
+				createTextInput("author"),
+				createLabelFor("page"),
+				createNumberInput("page"),
 				hidden
 			);
 			break;
 		case "manga":
-			detailsContainer.classList.add("details-"+currentCat);
+			hidden.setAttribute("value", currentCat);
 			detailsContainer.append(
-				createChapterLabel(),
-				createChapterInput(),
-				createLinkLabel(),
-				createLinkInput()
+				createLabelFor("chapter"),
+				createNumberInput("chapter"),
+				createLabelFor("link"),
+				createTextInput("link"),
+				hidden
 			);
 			break;
 		case "movies":
-			detailsContainer.classList.add("details-"+currentCat);
+			hidden.setAttribute("value", currentCat);
+			detailsContainer.append(
+				createLabelFor("director"),
+				createTextInput("director"),
+				createLabelFor("watched"),
+				createCheckBox("watched"),
+				createCheckBoxHidden("watched"),
+				hidden
+			);
 			break;
 		case "shows":
-			detailsContainer.classList.add("details-"+currentCat);
+			hidden.setAttribute("value", currentCat);
+			detailsContainer.append(
+				createLabelFor("season"),
+				createNumberInput("season"),
+				createLabelFor("watched"),
+				createCheckBox("watched"),
+				createCheckBoxHidden("watched"),
+				hidden
+			);
 			break;
 	}
 	openModal();
+	modalForm.querySelector(".save").addEventListener("click", function(){
+		postFormTo(currentCat).then(r => console.log(r));
+	});
 }

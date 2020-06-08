@@ -26,8 +26,8 @@ public class MediaResource {
 //		if(msc == null){
 //			return Response.status(409).build();
 //		}
-		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
-		System.out.println(type);
+//		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
+//		System.out.println(type);
 		return Response.ok().build();
 	}
 }

@@ -44,8 +44,8 @@
 				else throw "Wrong email/password";
 			})
 			.then(myJson => {
-				window.sessionStorage.clear()
-				window.sessionStorage.setItem("myJWT", myJson.JWT)
+				window.sessionStorage.clear();
+				window.sessionStorage.setItem("myJWT", myJson.JWT);
 				window.location.assign("/dashboard.html");
 			})
 			.catch(error => console.log(error));

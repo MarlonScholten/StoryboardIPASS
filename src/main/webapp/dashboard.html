@@ -65,18 +65,4 @@
 	</div>
 </main>
 </body>
-<script type="text/javascript">
-	function addNewMedia(event){
-		var formData = new FormData(document.querySelector("#add-media-form"));
-		var encData = new URLSearchParams(formData.entries());
-		event.preventDefault();
-
-		fetch("rest/user/media", {method:'POST', body: encData})
-			.then(function(response){
-				if(response.ok) return response.json();
-				else throw "Not valid media";
-			}).catch(e => console.log(e))
-	}
-	document.querySelector(".save").addEventListener("click", addNewMedia);
-</script>
 </html>
