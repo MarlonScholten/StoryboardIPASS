@@ -4,12 +4,33 @@ addBtn.addEventListener("click", addMedia);
 let modal = document.querySelector("#add-media-modal");
 let modalForm = modal.querySelector("#add-media-form");
 
+// Image preview, this code needs to be active all the time
+let imgHolder = document.querySelector("#image-holder");
+let imgInput = document.querySelector("#mediaImage");
+
+imgInput.onchange = function(event) {
+	let reader = new FileReader();
+	reader.onload = function(){
+		let dataURL = reader.result;
+		let output = imgHolder;
+		output.style.backgroundImage = "url("+dataURL+")";
+	};
+	reader.readAsDataURL(imgInput.files[0]);
+	imgInput.style.backgroundColor = "#fff";
+};
+function resetImgPreview(){
+	imgHolder.style.backgroundImage = "";
+	imgInput.style.backgroundColor = "";
+}
 function closeModal(){
 	modalForm.reset();
+	resetImgPreview();
 	modal.style.opacity = "0";
 	setTimeout(visible => modal.style.visibility = "hidden", 200);
 }
 function openModal(){
+	resetImgPreview();
+	modalForm.reset();
 	let formCancel = modal.querySelector(".cancel");
 	formCancel.addEventListener("click", closeModal);
 	modal.style.visibility = "visible";
