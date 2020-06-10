@@ -81,8 +81,30 @@
 }
 #add-media-modal textarea{
     resize: none;
-    height:80%;
+    height:60%;
     font-size:11px;
+}
+#add-media-modal #genre-holder label{
+    font-size:14px;
+    width: 100%;
+    margin-bottom: 3px;
+}
+#add-media-modal .bootstrap-select .dropdown-toggle{
+    padding: 3px 5px;
+    font-size: 13px;
+    background-color: #ededed;
+    color: #212529;
+    border:none;
+    text-transform: capitalize;
+}
+#add-media-modal .bootstrap-select .dropdown-menu {
+    padding:2px 0px;
+    min-height:10px !important;
+}
+#add-media-modal .bootstrap-select .dropdown-menu .dropdown-item{
+    padding:2px 10px;
+    font-size:13px;
+    text-transform: capitalize;
 }
 #add-media-modal .notes-area{
     height:200px;

@@ -4,9 +4,9 @@ addBtn.addEventListener("click", addMedia);
 let modal = document.querySelector("#add-media-modal");
 let modalForm = modal.querySelector("#add-media-form");
 
-// Image preview, this code needs to be active all the time
+// Image preview, this code needs to be active all the time because of the onchange
 let imgHolder = document.querySelector("#image-holder");
-let imgInput = document.querySelector("#mediaImage");
+let imgInput = document.querySelector("#thumbnail");
 
 imgInput.onchange = function(event) {
 	let reader = new FileReader();
@@ -54,15 +54,9 @@ function createTextInput(name){
 	let textInput = document.createElement("input");
 	textInput.setAttribute("type", "text");
 	textInput.setAttribute("placeholder", "No " + name);
+	textInput.setAttribute("name", name);
 	textInput.id = name;
 	return textInput;
-}
-function createHiddenType(){
-	let typeInput = document.createElement("input");
-	typeInput.setAttribute("type", "hidden");
-	typeInput.setAttribute("name", "type");
-	typeInput.setAttribute("id", "type");
-	return typeInput;
 }
 function createCheckBox(name){
 	let checkbox = document.createElement("input");
@@ -80,6 +74,16 @@ function createCheckBoxHidden(name){
 	boxHidden.id = name;
 	return boxHidden;
 }
+function populateGenrePicker(){
+	let genreHolder = document.querySelector("#genre-holder");
+	// remove all options
+	while(genreHolder.firstChild){
+		genreHolder.removeChild(genreHolder.lastChild);
+	}
+	//populate options again
+	fetch("rest/user/genres").then(r => console.log(r))
+}
+populateGenrePicker();
 function postFormTo(resource){
 	let formData = new FormData(document.querySelector("#add-media-form"));
 	let encData = new URLSearchParams(formData.entries());
@@ -102,75 +106,68 @@ function addMedia(){
 	let allMenuItems = document.querySelector("#main-nav").children;
 	let currentCat;
 
+	// set the current category
 	for(let i=0; i<allMenuItems.length;i++){
 		if(allMenuItems[i].classList.contains("active")){
 			currentCat = allMenuItems[i].querySelector(".nav-label").innerHTML;
 		}
 	}
 
+	// remove all previously added details
 	let detailsContainer = modalForm.querySelector("#media-details-container");
 	while (detailsContainer.firstChild) {
 		detailsContainer.removeChild(detailsContainer.lastChild);
 	}
+	// remove all classes
 	for(let i=0;i<detailsContainer.classList.length; i++){
 		detailsContainer.classList.remove(detailsContainer.classList[i]);
 	}
+	// add the col class again
 	detailsContainer.classList.add("col-4");
 
-	let hidden = createHiddenType();
 	switch(currentCat) {
 		case "anime":
-			hidden.setAttribute("value", currentCat);
 			detailsContainer.append(
 				createLabelFor("season"),
 				createNumberInput("season"),
 				createLabelFor("episode"),
 				createNumberInput("episode"),
 				createLabelFor("link"),
-				createTextInput("link"),
-				hidden
+				createTextInput("link")
 			);
 			break;
 		case "books":
-			hidden.setAttribute("value", currentCat);
 			detailsContainer.append(
 				createLabelFor("author"),
 				createTextInput("author"),
 				createLabelFor("page"),
-				createNumberInput("page"),
-				hidden
+				createNumberInput("page")
 			);
 			break;
 		case "manga":
-			hidden.setAttribute("value", currentCat);
 			detailsContainer.append(
 				createLabelFor("chapter"),
 				createNumberInput("chapter"),
 				createLabelFor("link"),
-				createTextInput("link"),
-				hidden
+				createTextInput("link")
 			);
 			break;
 		case "movies":
-			hidden.setAttribute("value", currentCat);
 			detailsContainer.append(
 				createLabelFor("director"),
 				createTextInput("director"),
 				createLabelFor("watched"),
 				createCheckBox("watched"),
-				createCheckBoxHidden("watched"),
-				hidden
+				createCheckBoxHidden("watched")
 			);
 			break;
 		case "shows":
-			hidden.setAttribute("value", currentCat);
 			detailsContainer.append(
 				createLabelFor("season"),
 				createNumberInput("season"),
 				createLabelFor("watched"),
 				createCheckBox("watched"),
-				createCheckBoxHidden("watched"),
-				hidden
+				createCheckBoxHidden("watched")
 			);
 			break;
 	}

@@ -19,6 +19,11 @@ public class ContextListener implements ServletContextListener {
 
 		Genre scifi= new Genre("Sci-fi");
 		Genre thriller= new Genre("Thriller");
+		Genre horror = new Genre("Horror");
+		Genre comedy = new Genre("Comedy");
+		Genre romance = new Genre("Romance");
+		Genre adventure =  new Genre("Adventure");
+
 		ArrayList<Genre> bravegenres = new ArrayList<>();
 		bravegenres.add(scifi);
 		bravegenres.add(thriller);
@@ -28,6 +33,7 @@ public class ContextListener implements ServletContextListener {
 		Movie goodwillhunting =  new Movie("Good Will Hunting", "A movie about a kid who is too smart", braveImg, "Gus Van Sant", true);
 		Manga onepiece = new Manga("One Piece", "A boy named luffy wants to become the pirate king", braveImg, 244, "https://mangaplus.shueisha.co.jp/titles/100020");
 		Show vikings = new Show("Vikings", "badassery", braveImg, 2, 12);
+
 
 		demo.getArchive().addMedia(bravenewworld);
 		marlon.getArchive().addMedia(bravenewworld);

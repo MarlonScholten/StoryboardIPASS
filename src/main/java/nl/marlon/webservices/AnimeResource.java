@@ -10,6 +10,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,5 +32,27 @@ public class AnimeResource {
 			}
 		}
 		return Response.ok(allAnime).build();
+	}
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response addNewAnime(@Context SecurityContext msc,
+								@FormParam("title") String title,
+								@FormParam("description") String description,
+								@FormParam("thumbnail") File thumbnail,
+								@FormParam("notes") String notes,
+								@FormParam("season") int season,
+								@FormParam("episode") int episode,
+								@FormParam("link") String link) throws UnauthorizedException {
+		if(msc == null){
+			return Response.status(409).build();
+		}
+		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
+		Anime newAnime = new Anime(title, description, thumbnail, notes, season, episode, link);
+		if(user.getArchive().addMedia(newAnime)){
+			System.out.println(user.getArchive().getAllMedia());
+			return Response.ok(newAnime).build();
+		} else{
+			return Response.status(409).build();
+		}
 	}
 }

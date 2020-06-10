@@ -2,6 +2,7 @@ package nl.marlon.model;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class Media {
 	protected String title;
@@ -97,5 +98,13 @@ public class Media {
 				"Thumbnail = " + thumbnail +"\n" +
 				"Notes = " + notes + '\n' +
 				"Genres = " + genres + '\n';
+	}
+
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Media media = (Media) o;
+		return title.equals(media.title);
 	}
 }
