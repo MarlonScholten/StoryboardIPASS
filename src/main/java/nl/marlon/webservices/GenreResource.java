@@ -1,7 +1,6 @@
 package nl.marlon.webservices;
 
 import nl.marlon.Exceptions.UnauthorizedException;
-import nl.marlon.model.Genre;
 import nl.marlon.model.User;
 
 import javax.ws.rs.*;
@@ -9,6 +8,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
+import java.util.ArrayList;
 
 
 @Path("user/genres")
@@ -21,10 +21,11 @@ public class GenreResource {
 			return Response.status(409).build();
 		}
 		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
-		for(Object obj : user.getArchive().getAllGenres()){
-			System.out.println(obj);
+		ArrayList allGenres = user.getArchive().getAllGenres();
+		if(allGenres != null){
+			return Response.ok(allGenres).build();
 		}
-		return Response.ok().build();
+		return Response.status(404).build();
 	}
 }
 

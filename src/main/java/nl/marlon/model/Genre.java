@@ -1,6 +1,5 @@
 package nl.marlon.model;
 
-import java.util.ArrayList;
 import java.util.Objects;
 
 public class Genre {

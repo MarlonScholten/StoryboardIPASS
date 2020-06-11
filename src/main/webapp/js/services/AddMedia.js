@@ -75,13 +75,33 @@ function createCheckBoxHidden(name){
 	return boxHidden;
 }
 function populateGenrePicker(){
-	let genreHolder = document.querySelector("#genre-holder");
+	let genres = document.querySelector("#genres");
 	// remove all options
-	while(genreHolder.firstChild){
-		genreHolder.removeChild(genreHolder.lastChild);
+	while(genres.firstChild){
+		genres.removeChild(genres.lastChild);
 	}
 	//populate options again
-	fetch("rest/user/genres").then(r => console.log(r))
+	const fetchoptions = {
+		method: 'GET',
+		headers: {
+			'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
+		}
+	};
+
+	fetch("rest/user/genres", fetchoptions)
+		.then(function (response){
+			if(response.ok) return response.json();
+			else if(response.status===401) console.log("unauthorized");
+		}).then(myJson => {
+			for(let i=0;i<myJson.length;i++){
+				let option = document.createElement("option");
+				option.setAttribute("name", "genre");
+				option.setAttribute("value", myJson[i].name);
+				option.innerText = myJson[i].name;
+				genres.append(option);
+				$('.selectpicker').selectpicker('refresh');
+			}
+	});
 }
 populateGenrePicker();
 function postFormTo(resource){
@@ -96,11 +116,11 @@ function postFormTo(resource){
 		body:encData
 	};
 
-	return fetch("rest/user/"+resource, fetchoptions,)
+	return fetch("rest/user/"+resource, fetchoptions)
 		.then(function (response){
 			if(response.ok) return response.json();
 			else if(response.status===401) console.log("unauthorized")
-		}).then(myJson => myJson)
+		})
 }
 function addMedia(){
 	let allMenuItems = document.querySelector("#main-nav").children;
@@ -124,7 +144,6 @@ function addMedia(){
 	}
 	// add the col class again
 	detailsContainer.classList.add("col-4");
-
 	switch(currentCat) {
 		case "anime":
 			detailsContainer.append(

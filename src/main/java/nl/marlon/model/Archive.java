@@ -46,17 +46,30 @@ public class Archive {
 		}
 	}
 
-	public ArrayList getAllGenres() {
-		return allGenres;
+	public boolean addGenre(Object obj){
+		if(obj instanceof Genre){
+			Genre genre = (Genre) obj;
+			if(!(allGenres.contains(genre))){
+				allGenres.add(genre);
+				return true;
+			} else{
+				return false;
+			}
+		} else{
+			return false;
+		}
 	}
 
-	public boolean createGenre(String name){
-		Genre newGenre = new Genre(name);
-		if(allGenres.contains(newGenre)){
-			return false;
-		} else{
-			allGenres.add(newGenre);
-			return true;
+	public Genre getGenreByName(String name){
+		for(Genre genre: allGenres){
+			if (genre.getName().equals(name)){
+				return genre;
+			}
 		}
+		return null;
+	}
+
+	public ArrayList getAllGenres() {
+		return allGenres;
 	}
 }

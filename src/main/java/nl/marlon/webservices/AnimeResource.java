@@ -40,6 +40,8 @@ public class AnimeResource {
 								@FormParam("description") String description,
 								@FormParam("thumbnail") File thumbnail,
 								@FormParam("notes") String notes,
+								@FormParam("genres") String genres,
+								@FormParam("genre") String genre,
 								@FormParam("season") int season,
 								@FormParam("episode") int episode,
 								@FormParam("link") String link) throws UnauthorizedException {
@@ -47,9 +49,12 @@ public class AnimeResource {
 			return Response.status(409).build();
 		}
 		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
+
+		System.out.println(genres);
+		System.out.println(genre);
+
 		Anime newAnime = new Anime(title, description, thumbnail, notes, season, episode, link);
 		if(user.getArchive().addMedia(newAnime)){
-			System.out.println(user.getArchive().getAllMedia());
 			return Response.ok(newAnime).build();
 		} else{
 			return Response.status(409).build();
