@@ -50,6 +50,7 @@ public class AnimeResource {
 		}
 		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
 
+		//TODO: Zorg ervoor dat de select meerdere genres meestuurt
 		System.out.println(genres);
 		System.out.println(genre);
 
