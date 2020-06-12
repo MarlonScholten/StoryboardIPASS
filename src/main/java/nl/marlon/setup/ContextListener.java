@@ -27,6 +27,9 @@ public class ContextListener implements ServletContextListener {
 		marlon.getArchive().addGenre(scifi);
 		marlon.getArchive().addGenre(thriller);
 		marlon.getArchive().addGenre(horror);
+		marlon.getArchive().addGenre(comedy);
+		marlon.getArchive().addGenre(romance);
+		marlon.getArchive().addGenre(adventure);
 
 		ArrayList<Genre> bravegenres = new ArrayList<>();
 		bravegenres.add(scifi);

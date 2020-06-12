@@ -9,7 +9,8 @@
 	<script src="https://kit.fontawesome.com/8c2044fb38.js" crossorigin="anonymous"></script>
 	<script type="module" src="js/services/UserService.js"></script>
 	<script type="module" src="js/services/MenuService.js"></script>
-	<script type="module" src="js/services/AddMedia.js"></script>
+	<script type="module" src="js/AddMedia.js"></script>
+	<script type="module" src="js/ShowMedia.js"></script>
 	<title>Dashboard</title>
 </head>
 <body>
@@ -29,6 +30,9 @@
 			<div class="card" id="add-media">
 				<h4 unselectable="on" class="unselectable">Add media</h4>
 			</div>
+			<div class="card" id="example-card">
+
+			</div>
 			<div id="add-media-modal">
 				<form id="add-media-form" method="POST">
 					<section class="row">
@@ -42,7 +46,7 @@
 							<textarea name="description" id="description" form="add-media-form" placeholder="Write the general synopsis of the story here. (or copy-paste it)"></textarea>
 							<div id="genre-holder">
 								<label for="genres">Genres</label>
-								<select name="genres" id="genres" class="selectpicker" multiple>
+								<select name="genres" id="genres" class="selectpicker" multiple="multiple">
 
 								</select>
 							</div>

@@ -2,6 +2,7 @@ package nl.marlon.webservices;
 
 import nl.marlon.Exceptions.UnauthorizedException;
 import nl.marlon.model.Anime;
+import nl.marlon.model.Genre;
 import nl.marlon.model.Media;
 import nl.marlon.model.User;
 
@@ -40,8 +41,7 @@ public class AnimeResource {
 								@FormParam("description") String description,
 								@FormParam("thumbnail") File thumbnail,
 								@FormParam("notes") String notes,
-								@FormParam("genres") String genres,
-								@FormParam("genre") String genre,
+								@FormParam("genres") List<String> genres,
 								@FormParam("season") int season,
 								@FormParam("episode") int episode,
 								@FormParam("link") String link) throws UnauthorizedException {
@@ -49,12 +49,15 @@ public class AnimeResource {
 			return Response.status(409).build();
 		}
 		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
+		ArrayList<Genre> genreObjs = new ArrayList<>();
+		for(String genre : genres){
+			Genre target = user.getArchive().getGenreByName(genre);
+			if(target != null){
+				genreObjs.add(target);
+			}
+		}
 
-		//TODO: Zorg ervoor dat de select meerdere genres meestuurt
-		System.out.println(genres);
-		System.out.println(genre);
-
-		Anime newAnime = new Anime(title, description, thumbnail, notes, season, episode, link);
+		Anime newAnime = new Anime(title, description, thumbnail, notes, genreObjs,  season, episode, link);
 		if(user.getArchive().addMedia(newAnime)){
 			return Response.ok(newAnime).build();
 		} else{

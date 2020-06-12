@@ -102,6 +102,7 @@ function populateGenrePicker(){
 				$('.selectpicker').selectpicker('refresh');
 			}
 	});
+	$('.selectpicker').selectpicker('render');
 }
 populateGenrePicker();
 function postFormTo(resource){
@@ -184,9 +185,8 @@ function addMedia(){
 			detailsContainer.append(
 				createLabelFor("season"),
 				createNumberInput("season"),
-				createLabelFor("watched"),
-				createCheckBox("watched"),
-				createCheckBoxHidden("watched")
+				createLabelFor("episode"),
+				createNumberInput("episode")
 			);
 			break;
 	}

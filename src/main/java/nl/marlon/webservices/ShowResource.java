@@ -1,16 +1,14 @@
 package nl.marlon.webservices;
 
 import nl.marlon.Exceptions.UnauthorizedException;
-import nl.marlon.model.Anime;
-import nl.marlon.model.Media;
-import nl.marlon.model.Show;
-import nl.marlon.model.User;
+import nl.marlon.model.*;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,14 +33,31 @@ public class ShowResource {
 	}
 	@POST
 	@Produces(MediaType.APPLICATION_JSON)
-	public Response addNewMovie(@Context SecurityContext msc,
-								@FormParam("watched") boolean watched) throws UnauthorizedException {
-
+	public Response addNewShow(@Context SecurityContext msc,
+								@FormParam("title") String title,
+								@FormParam("description") String description,
+								@FormParam("thumbnail") File thumbnail,
+								@FormParam("notes") String notes,
+								@FormParam("genres") List<String> genres,
+								@FormParam("season") int season,
+								@FormParam("episode") int episode) throws UnauthorizedException {
 		if(msc == null){
 			return Response.status(409).build();
 		}
 		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
-		System.out.println(watched);
-		return Response.ok(user).build();
+		ArrayList<Genre> genreObjs = new ArrayList<>();
+		for(String genre : genres){
+			Genre target = user.getArchive().getGenreByName(genre);
+			if(target != null){
+				genreObjs.add(target);
+			}
+		}
+
+		Show newShow = new Show(title, description, thumbnail, notes, genreObjs,  season, episode);
+		if(user.getArchive().addMedia(newShow)){
+			return Response.ok(newShow).build();
+		} else{
+			return Response.status(409).build();
+		}
 	}
 }

@@ -89,6 +89,9 @@
     width: 100%;
     margin-bottom: 3px;
 }
+#add-media-modal .bootstrap-select{
+    width:100%;
+}
 #add-media-modal .bootstrap-select .dropdown-toggle{
     padding: 3px 5px;
     font-size: 13px;
@@ -114,6 +117,7 @@
     width: 180px;
     margin: 12px;
     transition: all ease-in-out 0.1s;
+    border:none;
 }#media-container .card:hover{
      transform:scale(1.02);
      cursor:pointer;
@@ -168,4 +172,9 @@
     width:20px;
     height:20px;
     margin-top:3px;
+}
+#media-container #example-card{
+    background-image: url("http://placekitten.com/200/300");
+    background-size:cover;
+    background-repeat:no-repeat;
 }
