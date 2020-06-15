@@ -60,4 +60,5 @@ populateMenu().then(myCats => {
 		target.appendChild(tempContent);
 	}
 	defaultActive();
+	populateMediaContainer();
 });

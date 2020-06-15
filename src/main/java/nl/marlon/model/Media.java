@@ -3,8 +3,10 @@ package nl.marlon.model;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Objects;
+import java.util.UUID;
 
 public class Media {
+	protected String id = UUID.randomUUID().toString();
 	protected String title;
 	protected String description;
 	protected File thumbnail;
@@ -90,6 +92,12 @@ public class Media {
 		this.genres = genres;
 	}
 
+	public String getId() {
+		return id;
+	}
+
+
+
 	@Override
 	public String toString() {
 		return "Media:"+ '\n' +
@@ -105,6 +113,9 @@ public class Media {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Media media = (Media) o;
-		return title.equals(media.title);
+		return title.equals(media.title) &&
+				Objects.equals(description, media.description) &&
+				Objects.equals(notes, media.notes) &&
+				Objects.equals(genres, media.genres);
 	}
 }

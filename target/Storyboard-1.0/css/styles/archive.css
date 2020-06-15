@@ -118,7 +118,20 @@
     margin: 12px;
     transition: all ease-in-out 0.1s;
     border:none;
-}#media-container .card:hover{
+    padding:10px;
+}
+#media-container .card.media-item{
+    position: relative;
+}
+#media-container .card.media-item .media-title{
+    max-width:90%;
+}
+#media-container .card.media-item .del-btn{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+#media-container .card:hover{
      transform:scale(1.02);
      cursor:pointer;
  }

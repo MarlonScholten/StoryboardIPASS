@@ -33,6 +33,16 @@ function purgeMediaContainer(){
 		mediaContainer.removeChild(mediaContainer.firstChild);
 	}
 }
+function deleteMedia(mediaId){
+	if(confirm("Really delete this media?")){
+		fetch("rest/user/media/"+mediaId, {method: 'DELETE',
+			headers: {
+				'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
+			}}).then(populateMediaContainer);
+	} else{
+		// Do nothing
+	}
+}
 export function populateMediaContainer(){
 	purgeMediaContainer();
 
@@ -48,9 +58,19 @@ export function populateMediaContainer(){
 			for(obj of r){
 				let card = document.createElement("div");
 				card.classList.add("card");
-
-				console.log(obj.thumbnail);
-				card.style.backgroundImage = "url('"+ obj.thumbnail.replace(/\s/g,'')+"')";
+				card.classList.add("media-item");
+				let title = document.createElement("h6");
+				title.classList.add("media-title");
+				title.innerText = obj.title;
+				card.append(title);
+				let delbtn = document.createElement("i");
+				delbtn.classList.add("far");
+				delbtn.classList.add("fa-times-circle");
+				delbtn.classList.add("del-btn");
+				delbtn.addEventListener("click", function(){
+					deleteMedia(obj.id);
+				});
+				card.append(delbtn);
 
 				mediaContainer.prepend(card);
 			}

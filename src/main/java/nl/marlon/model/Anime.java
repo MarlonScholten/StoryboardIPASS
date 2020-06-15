@@ -2,6 +2,7 @@ package nl.marlon.model;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Anime extends Media{
 	private int season;

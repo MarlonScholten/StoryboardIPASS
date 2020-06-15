@@ -46,6 +46,25 @@ public class Archive {
 		}
 	}
 
+	public Media getMediaById(String id){
+		for(Media media : allMedia){
+			if(media.id.equals(id)){
+				return media;
+			}
+		}
+		return null;
+	}
+
+	public boolean deleteMedia(String id){
+		for(Media media : allMedia){
+			if(media.id.equals(id)){
+				allMedia.remove(media);
+				return true;
+			}
+		}
+		return false;
+	}
+
 	public boolean addGenre(Object obj){
 		if(obj instanceof Genre){
 			Genre genre = (Genre) obj;
