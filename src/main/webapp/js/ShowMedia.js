@@ -49,7 +49,8 @@ export function populateMediaContainer(){
 				let card = document.createElement("div");
 				card.classList.add("card");
 
-				console.log(obj);
+				console.log(obj.thumbnail);
+				card.style.backgroundImage = "url('"+ obj.thumbnail.replace(/\s/g,'')+"')";
 
 				mediaContainer.prepend(card);
 			}
