@@ -49,7 +49,7 @@ export function populateMediaContainer(){
 				let card = document.createElement("div");
 				card.classList.add("card");
 
-				card.style.backgroundImage = "url("+obj.thumbnail+")";
+				console.log(obj);
 
 				mediaContainer.prepend(card);
 			}
@@ -57,31 +57,3 @@ export function populateMediaContainer(){
 		mediaContainer.prepend(genAddMediaCard());
 	});
 }
-
-// switch(getCurrentCat()) {
-// 	case "anime":
-// 		mediaContainer.append(
-//
-// 		);
-// 		break;
-// 	case "books":
-// 		mediaContainer.append(
-//
-// 		);
-// 		break;
-// 	case "manga":
-// 		mediaContainer.append(
-//
-// 		);
-// 		break;
-// 	case "movies":
-// 		mediaContainer.append(
-//
-// 		);
-// 		break;
-// 	case "shows":
-// 		mediaContainer.append(
-//
-// 		);
-// 		break;
-// }

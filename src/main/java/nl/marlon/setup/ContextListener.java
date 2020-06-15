@@ -15,7 +15,7 @@ public class ContextListener implements ServletContextListener {
 		User marlon = new User("Marlon", "marlon_scholten@live.nl", "123");
 		User demo = new User("Demo", "demo", "123");
 
-		File braveImg = new File("src/main/webapp/images/brave-new-world.jpg");
+		File braveImg = new File("brave-new-world.jpg");
 
 		Genre scifi= new Genre("Sci-fi");
 		Genre thriller= new Genre("Thriller");
