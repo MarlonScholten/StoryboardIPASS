@@ -123,7 +123,7 @@ function postFormTo(resource){
 			else if(response.status===401) console.log("unauthorized")
 		})
 }
-function addMedia(){
+export function addMedia(){
 	let allMenuItems = document.querySelector("#main-nav").children;
 	let currentCat;
 
@@ -133,7 +133,6 @@ function addMedia(){
 			currentCat = allMenuItems[i].querySelector(".nav-label").innerHTML;
 		}
 	}
-
 	// remove all previously added details
 	let detailsContainer = modalForm.querySelector("#media-details-container");
 	while (detailsContainer.firstChild) {

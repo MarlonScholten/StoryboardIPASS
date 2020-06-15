@@ -1,39 +1,87 @@
+import { addMedia } from "./AddMedia.js";
+
 let mediaContainer = document.querySelector("#media-container");
 
-let allMenuItems = document.querySelector("#main-nav").children;
-let currentCat;
+function getCurrentCat(){
+	let allMenuItems = document.querySelector("#main-nav").children;
+	let currentCat;
 
-// set the current category
-for(let i=0; i<allMenuItems.length;i++){
-	if(allMenuItems[i].classList.contains("active")){
-		currentCat = allMenuItems[i].querySelector(".nav-label").innerHTML;
+	// set the current category
+	for(let i=0; i<allMenuItems.length;i++){
+		if(allMenuItems[i].classList.contains("active")){
+			currentCat = allMenuItems[i].querySelector(".nav-label").innerHTML;
+		}
+	}
+	return currentCat;
+}
+
+function genAddMediaCard(){
+	let addMediaEle = document.createElement("div");
+	addMediaEle.classList.add("card");
+	addMediaEle.id = "add-media";
+	let heading = document.createElement("h4");
+	heading.setAttribute("unselectable", "on");
+	heading.classList.add("unselectable");
+	heading.innerText = "Add media";
+	addMediaEle.appendChild(heading);
+	addMediaEle.addEventListener("click", addMedia);
+	return addMediaEle;
+}
+
+function purgeMediaContainer(){
+	while(mediaContainer.children.length > 1){
+		mediaContainer.removeChild(mediaContainer.firstChild);
 	}
 }
+export function populateMediaContainer(){
+	purgeMediaContainer();
 
-switch(currentCat) {
-	case "anime":
-		mediaContainer.append(
+	fetch("rest/user/"+getCurrentCat(), {method: 'GET',
+		headers: {
+			'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
+		}})
+		.then(function (response){
+			if(response.ok) return response.json();
+			else if(response.status===401) console.log("unauthorized");
+		}).then(r => {
+			let obj;
+			for(obj of r){
+				let card = document.createElement("div");
+				card.classList.add("card");
 
-		);
-		break;
-	case "books":
-		mediaContainer.append(
+				card.style.backgroundImage = "url("+obj.thumbnail+")";
 
-		);
-		break;
-	case "manga":
-		mediaContainer.append(
-
-		);
-		break;
-	case "movies":
-		mediaContainer.append(
-
-		);
-		break;
-	case "shows":
-		mediaContainer.append(
-
-		);
-		break;
+				mediaContainer.prepend(card);
+			}
+	}).then(r =>{
+		mediaContainer.prepend(genAddMediaCard());
+	});
 }
+
+// switch(getCurrentCat()) {
+// 	case "anime":
+// 		mediaContainer.append(
+//
+// 		);
+// 		break;
+// 	case "books":
+// 		mediaContainer.append(
+//
+// 		);
+// 		break;
+// 	case "manga":
+// 		mediaContainer.append(
+//
+// 		);
+// 		break;
+// 	case "movies":
+// 		mediaContainer.append(
+//
+// 		);
+// 		break;
+// 	case "shows":
+// 		mediaContainer.append(
+//
+// 		);
+// 		break;
+// }

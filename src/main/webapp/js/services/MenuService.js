@@ -1,3 +1,4 @@
+import { populateMediaContainer } from "../ShowMedia.js";
 function getResource(resource) {
 	const fetchoptions = {
 		method: 'GET',
@@ -35,6 +36,7 @@ function switchCat(cat){
 	let menuItem = document.querySelector("." + targetCat+"-menu-item");
 	clearActiveStates();
 	menuItem.classList.add("active");
+	populateMediaContainer();
 }
 function defaultActive(){
 	let allMenuItems = document.querySelector("#main-nav").children;
