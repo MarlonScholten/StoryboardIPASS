@@ -1,4 +1,4 @@
-import { populateMediaContainer } from "../ShowMedia.js";
+import { populateMediaContainer } from "../ShowAllMedia.js";
 function getResource(resource) {
 	const fetchoptions = {
 		method: 'GET',

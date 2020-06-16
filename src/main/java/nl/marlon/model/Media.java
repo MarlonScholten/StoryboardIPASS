@@ -113,8 +113,10 @@ public class Media {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
 		Media media = (Media) o;
-		return title.equals(media.title) &&
+		return id.equals(media.id) &&
+				Objects.equals(title, media.title) &&
 				Objects.equals(description, media.description) &&
+				Objects.equals(thumbnail, media.thumbnail) &&
 				Objects.equals(notes, media.notes) &&
 				Objects.equals(genres, media.genres);
 	}
