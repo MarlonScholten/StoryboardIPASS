@@ -96,8 +96,6 @@ public class Media {
 		return id;
 	}
 
-
-
 	@Override
 	public String toString() {
 		return "Media:"+ '\n' +
