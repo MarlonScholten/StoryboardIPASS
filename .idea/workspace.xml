@@ -7,10 +7,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b138f14a-b5ee-4dc8-b361-3902bb01afeb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/nl/marlon/model/ArchiveTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/nl/marlon/model/UserTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/nl/marlon/model/ArchiveTest.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/test-classes/nl/marlon/model/UserTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/model/Media.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/model/Media.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/setup/ContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/setup/ContextListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/nl/marlon/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/services/MenuService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/services/MenuService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/setup/ContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/setup/ContextListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/css/styles/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/css/styles/menu.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/js/services/MenuService.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/js/services/MenuService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/marlon/setup/ContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/marlon/setup/ContextListener.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,12 +31,12 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Arquillian JUnit Test Class" />
-        <option value="JUnit5 Test Class" />
         <option value="HTML File" />
         <option value="package.json" />
         <option value="CSS File" />
         <option value="Class" />
         <option value="JavaScript File" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -98,8 +108,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.34">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="nl.marlon.model.App" />
+    <configuration name="ArchiveTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Storyboard" />
       <extension name="coverage">
         <pattern>
@@ -107,22 +116,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AnimeTest.getSeason" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Storyboard" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nl.marlon.model.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nl.marlon" />
-      <option name="MAIN_CLASS_NAME" value="nl.marlon.AnimeTest" />
-      <option name="METHOD_NAME" value="getSeason" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="nl.marlon.model" />
+      <option name="MAIN_CLASS_NAME" value="nl.marlon.model.ArchiveTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -138,6 +134,54 @@
       <option name="PACKAGE_NAME" value="nl.marlon.model" />
       <option name="MAIN_CLASS_NAME" value="nl.marlon.model.UserTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.checkFalseCredentials" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Storyboard" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.marlon.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.marlon.model" />
+      <option name="MAIN_CLASS_NAME" value="nl.marlon.model.UserTest" />
+      <option name="METHOD_NAME" value="checkFalseCredentials" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.checkPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Storyboard" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.marlon.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.marlon.model" />
+      <option name="MAIN_CLASS_NAME" value="nl.marlon.model.UserTest" />
+      <option name="METHOD_NAME" value="checkPassword" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.getUserByEmail" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Storyboard" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.marlon.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.marlon.model" />
+      <option name="MAIN_CLASS_NAME" value="nl.marlon.model.UserTest" />
+      <option name="METHOD_NAME" value="getUserByEmail" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -218,16 +262,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
-      <item itemvalue="JUnit.AnimeTest.getSeason" />
-      <item itemvalue="JUnit.UserTest" />
       <item itemvalue="Tomcat Server.Tomcat 9.0.34" />
+      <item itemvalue="JUnit.UserTest.checkFalseCredentials" />
+      <item itemvalue="JUnit.UserTest.checkPassword" />
+      <item itemvalue="JUnit.UserTest" />
+      <item itemvalue="JUnit.UserTest.getUserByEmail" />
+      <item itemvalue="JUnit.ArchiveTest" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
         <item itemvalue="JUnit.UserTest" />
-        <item itemvalue="JUnit.AnimeTest.getSeason" />
+        <item itemvalue="JUnit.UserTest.getUserByEmail" />
+        <item itemvalue="JUnit.ArchiveTest" />
+        <item itemvalue="JUnit.UserTest.checkPassword" />
+        <item itemvalue="JUnit.UserTest.checkFalseCredentials" />
       </list>
     </recent_temporary>
   </component>
@@ -369,7 +417,7 @@
       <workItem from="1592312461174" duration="2229000" />
       <workItem from="1592314731243" duration="691000" />
       <workItem from="1592315539679" duration="4417000" />
-      <workItem from="1592385131553" duration="1998000" />
+      <workItem from="1592385131553" duration="22754000" />
     </task>
     <servers />
   </component>
@@ -384,6 +432,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="434" y="198" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590055705822" />
+    <state x="93" y="93" width="1862" height="926" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1592399278030">
+      <screen x="0" y="0" width="2048" height="1112" />
+    </state>
+    <state x="93" y="93" width="1862" height="926" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592399278030" />
     <state x="788" y="360" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1592221968306">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -408,54 +460,54 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="312" key="FileChooserDialogImpl/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589789942275" />
-    <state width="1776" height="190" key="GridCell.Tab.0.bottom" timestamp="1592321477503">
+    <state width="1776" height="192" key="GridCell.Tab.0.bottom" timestamp="1592413735021">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="190" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592321477503" />
-    <state width="1776" height="190" key="GridCell.Tab.0.center" timestamp="1592321477502">
+    <state width="1776" height="192" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592413735021" />
+    <state width="1776" height="192" key="GridCell.Tab.0.center" timestamp="1592413735021">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="190" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592321477502" />
-    <state width="1776" height="190" key="GridCell.Tab.0.left" timestamp="1592321477502">
+    <state width="1776" height="192" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592413735021" />
+    <state width="1776" height="192" key="GridCell.Tab.0.left" timestamp="1592413735021">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="190" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592321477502" />
-    <state width="1776" height="190" key="GridCell.Tab.0.right" timestamp="1592321477503">
+    <state width="1776" height="192" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592413735021" />
+    <state width="1776" height="192" key="GridCell.Tab.0.right" timestamp="1592413735021">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="190" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592321477503" />
-    <state width="1776" height="190" key="GridCell.Tab.1.bottom" timestamp="1592321477503">
+    <state width="1776" height="192" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592413735021" />
+    <state width="1776" height="192" key="GridCell.Tab.1.bottom" timestamp="1592413734937">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="190" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592321477503" />
-    <state width="1776" height="190" key="GridCell.Tab.1.center" timestamp="1592321477503">
+    <state width="1776" height="192" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592413734937" />
+    <state width="1776" height="192" key="GridCell.Tab.1.center" timestamp="1592413734937">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="190" key="GridCell.Tab.1.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592321477503" />
-    <state width="1776" height="190" key="GridCell.Tab.1.left" timestamp="1592321477503">
+    <state width="1776" height="192" key="GridCell.Tab.1.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592413734937" />
+    <state width="1776" height="192" key="GridCell.Tab.1.left" timestamp="1592413734937">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="190" key="GridCell.Tab.1.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592321477503" />
-    <state width="1776" height="190" key="GridCell.Tab.1.right" timestamp="1592321477503">
+    <state width="1776" height="192" key="GridCell.Tab.1.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592413734937" />
+    <state width="1776" height="192" key="GridCell.Tab.1.right" timestamp="1592413734937">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="190" key="GridCell.Tab.1.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592321477503" />
-    <state width="1776" height="190" key="GridCell.Tab.2.bottom" timestamp="1592321477503">
+    <state width="1776" height="192" key="GridCell.Tab.1.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592413734937" />
+    <state width="1776" height="192" key="GridCell.Tab.2.bottom" timestamp="1592413734937">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="190" key="GridCell.Tab.2.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592321477503" />
-    <state width="1776" height="190" key="GridCell.Tab.2.center" timestamp="1592321477503">
+    <state width="1776" height="192" key="GridCell.Tab.2.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592413734937" />
+    <state width="1776" height="192" key="GridCell.Tab.2.center" timestamp="1592413734937">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="190" key="GridCell.Tab.2.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592321477503" />
-    <state width="1776" height="190" key="GridCell.Tab.2.left" timestamp="1592321477503">
+    <state width="1776" height="192" key="GridCell.Tab.2.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592413734937" />
+    <state width="1776" height="192" key="GridCell.Tab.2.left" timestamp="1592413734937">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="190" key="GridCell.Tab.2.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592321477503" />
-    <state width="1776" height="190" key="GridCell.Tab.2.right" timestamp="1592321477503">
+    <state width="1776" height="192" key="GridCell.Tab.2.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592413734937" />
+    <state width="1776" height="192" key="GridCell.Tab.2.right" timestamp="1592413734937">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="190" key="GridCell.Tab.2.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592321477503" />
+    <state width="1776" height="192" key="GridCell.Tab.2.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592413734937" />
     <state x="571" y="224" key="Maven.ArtifactSearchDialog" timestamp="1592304986386">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -476,10 +528,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="834" y="474" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1588865318061" />
-    <state x="796" y="260" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1589900219421">
+    <state x="796" y="260" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1592396498729">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="796" y="260" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589900219421" />
+    <state x="796" y="260" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592396498729" />
     <state x="755" y="323" key="extract.method.dialog" timestamp="1590762784720">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

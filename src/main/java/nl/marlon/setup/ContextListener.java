@@ -44,14 +44,14 @@ public class ContextListener implements ServletContextListener {
 		marlon.getArchive().addGenre(romance);
 		marlon.getArchive().addGenre(adventure);
 
-		marlon.getArchive().addMedia(bravenewworld);
+//		marlon.getArchive().addMedia(bravenewworld);
 		marlon.getArchive().addMedia(psychopass);
 		marlon.getArchive().addMedia(Onepiece);
 		marlon.getArchive().addMedia(Onepace);
 		marlon.getArchive().addMedia(unoPiece);
 		marlon.getArchive().addMedia(goodwillhunting);
 		marlon.getArchive().addMedia(onepiece);
-		marlon.getArchive().addMedia(vikings);
+//		marlon.getArchive().addMedia(vikings);
 
 		// Demo Account
 		User demo = new User("demo", "demo@hotmail.com", "mypassword");
@@ -95,12 +95,12 @@ public class ContextListener implements ServletContextListener {
 		demo.getArchive().addMedia(matrix);
 		demo.getArchive().addMedia(fightclub);
 		demo.getArchive().addMedia(killbill);
-		demo.getArchive().addMedia(madeabyss);
-		demo.getArchive().addMedia(berserk);
-		demo.getArchive().addMedia(fma);
-		demo.getArchive().addMedia(breakingbad);
-		demo.getArchive().addMedia(narcos);
-		demo.getArchive().addMedia(alteredcarbon);
+//		demo.getArchive().addMedia(madeabyss);
+//		demo.getArchive().addMedia(berserk);
+//		demo.getArchive().addMedia(fma);
+//		demo.getArchive().addMedia(breakingbad);
+//		demo.getArchive().addMedia(narcos);
+//		demo.getArchive().addMedia(alteredcarbon);
 	}
 	public void contextDestroyed(ServletContextEvent sce){
 

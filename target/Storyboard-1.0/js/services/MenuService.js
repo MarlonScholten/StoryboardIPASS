@@ -17,8 +17,8 @@ function getResource(resource) {
 			}
 		})
 }
-function populateMenu(){
-	const resources = ["anime", "books", "manga", "movies", "shows"];
+function getCategories(){
+	const resources = ["anime", "manga", "books", "movies", "shows"];
 	return Promise.all(resources.map(getResource)).then(items=>{
 		return items.filter(item=>{
 			return item!== undefined
@@ -30,6 +30,67 @@ function clearActiveStates(){
 	for(let i=0; i<allMenuItems.length;i++){
 		allMenuItems[i].classList.remove("active");
 	}
+}
+function genMenuItem(name){
+	name = name.toLowerCase();
+	const navTemp = document.querySelector("#nav-template");
+
+	let tempContent = navTemp.content.cloneNode(true);
+	let label = tempContent.querySelector(".nav-label");
+	let href = tempContent.querySelector(".menu-href");
+
+	label.innerText = (name);
+	href.classList.add(name + "-menu-item");
+	href.classList.add("unselectable");
+	href.addEventListener("click", switchCat, false);
+	href.targetCat = name;
+	return tempContent;
+}
+function getCatDiff(){
+	return getCategories().then(myCats=>{
+		let resources = ["anime", "manga", "books", "movies", "shows"];
+		let difference = resources.filter(x => !myCats.includes(x));
+		return difference;
+	});
+}
+function toggleCatSelect(){
+	let holder = document.querySelector("#cat-select-holder");
+	holder.classList.toggle("select-open");
+}
+function genCatSelect(){
+	let target =  document.querySelector("#main-nav");
+
+	let catContainer = document.createElement("div");
+	catContainer.id = "cat-container";
+	let btn = document.createElement("button");
+	btn.id = "add-cat-btn";
+	let icon = document.createElement("i");
+	icon.classList.add("far");
+	icon.classList.add("fa-plus-square");
+	let span = document.createElement("span");
+	span.innerText = "Add category";
+	btn.append(icon, span);
+	btn.addEventListener("click", function(){
+		toggleCatSelect()
+	});
+	catContainer.append(btn);
+	let selectholder = document.createElement("div");
+	selectholder.id = "cat-select-holder";
+
+	getCatDiff().then(diff => {
+		for(let i=0;i<diff.length;i++){
+			let catbtn = document.createElement("button");
+			catbtn.classList.add("cat-select-btn");
+			catbtn.innerText = diff[i];
+			catbtn.addEventListener("click", function(){
+				selectholder.removeChild(catbtn);
+				target.lastChild.before(genMenuItem(catbtn.innerText));
+			});
+			selectholder.append(catbtn);
+		}
+	});
+	catContainer.append(selectholder);
+	return catContainer;
 }
 function switchCat(cat){
 	let targetCat = cat.currentTarget.targetCat;
@@ -43,21 +104,14 @@ function defaultActive(){
 	clearActiveStates();
 	allMenuItems[0].classList.add("active");
 }
-populateMenu().then(myCats => {
-	const navTemp = document.querySelector("#nav-template");
+getCategories().then(myCats => {
 	let target =  document.querySelector("#main-nav");
 
 	for(let i=0; i<myCats.length;i++){
-		let tempContent = navTemp.content.cloneNode(true);
-		let label = tempContent.querySelector(".nav-label");
-		let href = tempContent.querySelector(".menu-href");
-
-		label.innerText = (myCats[i]);
-		href.classList.add(myCats[i] + "-menu-item");
-		href.classList.add("unselectable");
-		href.addEventListener("click", switchCat, false);
-		href.targetCat = myCats[i];
-		target.appendChild(tempContent);
+		target.append(genMenuItem(myCats[i]));
+	}
+	if(!(myCats.length === 5)){
+		target.append(genCatSelect())
 	}
 	defaultActive();
 	populateMediaContainer();

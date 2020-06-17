@@ -32,6 +32,50 @@
     min-width: 60px;
     text-transform: capitalize;
 }
+#main-nav #cat-select-holder {
+    visibility: hidden;
+    opacity: 0;
+    transition: all ease-in-out 0.2s;
+}
+#main-nav #cat-select-holder.select-open{
+    visibility: visible;
+    opacity: 1;
+    transition: all ease-in-out 0.2s;
+}
+#main-nav #add-cat-btn{
+    background-color: transparent;
+    border: none;
+    color: #858585;
+    height: 40px;
+    width: 100%;
+}
+#main-nav #cat-select-holder .cat-select-btn{
+    width: auto;
+    display: block;
+    border: none;
+    margin: 0 auto 5px;
+    background-color: transparent;
+    color: #858585;
+    text-transform: capitalize;
+}
+#main-nav #cat-select-holder .cat-select-btn:hover{
+    color: #bababa;
+}
+#main-nav #add-cat-btn:hover{
+    color: #bababa;
+}
+#main-nav #add-cat-btn:focus,
+#main-nav #cat-select-holder .cat-select-btn:focus{
+    border: none;
+    outline: none;
+}
+#main-nav #cat-container {
+    border-top: 1.5px dashed #6c6c6c;
+}
+#main-nav #add-cat-btn > i{
+    margin-right:7px;
+    font-weight: 300;
+}
 #main-title-container > h2 {
     padding: 20px 0px;
     font-weight:400;
