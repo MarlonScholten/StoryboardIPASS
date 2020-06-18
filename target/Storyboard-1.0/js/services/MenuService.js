@@ -1,4 +1,6 @@
 import { populateMediaContainer } from "../ShowAllMedia.js";
+import { closeModal } from "../ShowMedia.js";
+
 function getResource(resource) {
 	const fetchoptions = {
 		method: 'GET',
@@ -93,11 +95,13 @@ function genCatSelect(){
 	return catContainer;
 }
 function switchCat(cat){
+	let sinModal = document.querySelector("#single-media-modal");
 	let targetCat = cat.currentTarget.targetCat;
 	let menuItem = document.querySelector("." + targetCat+"-menu-item");
 	clearActiveStates();
 	menuItem.classList.add("active");
 	populateMediaContainer();
+	closeModal(sinModal)
 }
 function defaultActive(){
 	let allMenuItems = document.querySelector("#main-nav").children;

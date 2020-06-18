@@ -27,34 +27,10 @@ public class ContextListener implements ServletContextListener {
 		bravegenres.add(scifi);
 		bravegenres.add(thriller);
 
-		Book bravenewworld = new Book("Brave new world", "A sci-fi thriller with interesting characters and a more interesting world", braveImg,"Very cool", bravegenres, 23, "Aldous Huxley");
-		Anime psychopass = new Anime("Psycho Pass", "A sci-fi police thriller", braveImg, "pretty gory", bravegenres, 2, 4, "https://www1.animeultima.to/a/psycho-pass-2_481893");
-		Anime Onepiece = new Anime("One Piece", "A pirate adventure", braveImg, "very rich in fantasy", bravegenres, 1, 890, "https://www1.animeultima.to/a/psycho-pass-2_481893");
-		Anime Onepace = new Anime("One Pace", "A pirate adventure", braveImg, "very rich in fantasy", bravegenres, 1, 890, "https://www1.animeultima.to/a/psycho-pass-2_481893");
-		Anime unoPiece = new Anime("Uno Piece", "A pirate adventure", braveImg, "very rich in fantasy", bravegenres, 1, 890, "https://www1.animeultima.to/a/psycho-pass-2_481893");
-		Movie goodwillhunting =  new Movie("Good Will Hunting", "A movie about a kid who is too smart", braveImg, "Gus Van Sant", true);
-		Manga onepiece = new Manga("One Piece", "A boy named luffy wants to become the pirate king", braveImg, 244, "https://mangaplus.shueisha.co.jp/titles/100020");
-		Show vikings = new Show("Vikings", "badassery", braveImg, 2, 12);
-
-		// Marlon account
-		marlon.getArchive().addGenre(scifi);
-		marlon.getArchive().addGenre(thriller);
-		marlon.getArchive().addGenre(horror);
-		marlon.getArchive().addGenre(comedy);
-		marlon.getArchive().addGenre(romance);
-		marlon.getArchive().addGenre(adventure);
-
-//		marlon.getArchive().addMedia(bravenewworld);
-		marlon.getArchive().addMedia(psychopass);
-		marlon.getArchive().addMedia(Onepiece);
-		marlon.getArchive().addMedia(Onepace);
-		marlon.getArchive().addMedia(unoPiece);
-		marlon.getArchive().addMedia(goodwillhunting);
-		marlon.getArchive().addMedia(onepiece);
-//		marlon.getArchive().addMedia(vikings);
-
-		// Demo Account
-		User demo = new User("demo", "demo@hotmail.com", "mypassword");
+		ArrayList<Genre> towergenres = new ArrayList<>();
+		towergenres.add(adventure);
+		towergenres.add(comedy);
+		towergenres.add(romance);
 
 		Book gulag = new Book("The Gulag Archipelago", "History book about russian gulags. A real story", braveImg,"", bravegenres, 23, "Aleksandr Solzjenitsyn");
 		Book crimeAndPun = new Book("Crime and Punishment", "Book about the darker side of humanity", braveImg,"", bravegenres, 12, "Fjodor Dostojevski");
@@ -63,7 +39,7 @@ public class ContextListener implements ServletContextListener {
 
 		Anime dororo = new Anime("Dororo", "A cursed boy slowly regains his humanity", braveImg, "dark", bravegenres, 1, 5, "");
 		Anime vinland = new Anime("Vinland saga", "Vikings", braveImg, "realistic", bravegenres, 1, 5, "");
-		Anime towergod = new Anime("Tower of God", "a gauntlet", braveImg, "mysterious", bravegenres, 1, 5, "");
+		Anime towergod = new Anime("Tower of God", "Tower of God centers around a boy called Twenty-Fifth Bam, who has spent most of his life trapped beneath a vast and mysterious Tower, with only his close friend, Rachel, to keep him company. When Rachel enters the Tower, Bam manages to open the door into it as well, and faces challenges at each floor of this tower as he tries to find his closest companion.", braveImg, "mysterious", towergenres, 1, 13, "https://www.kickassanime.rs/anime/kami-no-tou-346996/episode-12-914903");
 
 		Movie matrix =  new Movie("The Matrix", "blue pill or red pill", braveImg, "Lana & Lilly Wachowski", true);
 		Movie fightclub =  new Movie("Fight Club", "its about a fight club", braveImg, "David Fincher", true);
@@ -76,6 +52,34 @@ public class ContextListener implements ServletContextListener {
 		Show breakingbad = new Show("Breaking bad", "selling meth is dangerous", braveImg, 5, 12);
 		Show narcos = new Show("Narcos", "Pablo escobars rise and fall", braveImg, 5, 12);
 		Show alteredcarbon = new Show("Altered Carbon", "people can now store their consciousness in devices", braveImg, 5, 12);
+
+		// Marlon account
+		marlon.getArchive().addGenre(scifi);
+		marlon.getArchive().addGenre(thriller);
+		marlon.getArchive().addGenre(horror);
+		marlon.getArchive().addGenre(comedy);
+		marlon.getArchive().addGenre(romance);
+		marlon.getArchive().addGenre(adventure);
+
+		marlon.getArchive().addMedia(gulag);
+		marlon.getArchive().addMedia(crimeAndPun);
+		marlon.getArchive().addMedia(catcherRye);
+		marlon.getArchive().addMedia(notesUnder);
+		marlon.getArchive().addMedia(dororo);
+		marlon.getArchive().addMedia(vinland);
+		marlon.getArchive().addMedia(towergod);
+		marlon.getArchive().addMedia(matrix);
+		marlon.getArchive().addMedia(fightclub);
+		marlon.getArchive().addMedia(killbill);
+		marlon.getArchive().addMedia(madeabyss);
+		marlon.getArchive().addMedia(berserk);
+		marlon.getArchive().addMedia(fma);
+		marlon.getArchive().addMedia(breakingbad);
+		marlon.getArchive().addMedia(narcos);
+		marlon.getArchive().addMedia(alteredcarbon);
+
+		// Demo Account
+		User demo = new User("demo", "demo@hotmail.com", "mypassword");
 
 		// Demo
 		demo.getArchive().addGenre(scifi);

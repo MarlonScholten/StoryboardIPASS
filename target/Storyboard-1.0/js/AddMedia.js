@@ -36,41 +36,45 @@ function openModal(){
 	modal.style.visibility = "visible";
 	modal.style.opacity = "1";
 }
-function createLabelFor(name){
+export function createLabelFor(name){
 	let label = document.createElement("label");
 	label.setAttribute("for", name);
 	label.innerText = name;
 	return label;
 }
-function createNumberInput(name){
+export function createNumberInput(name, value){
 	let numberInput = document.createElement("input");
 	numberInput.setAttribute("type", "number");
 	numberInput.setAttribute("placeholder", "0");
 	numberInput.setAttribute("name", name);
+	numberInput.setAttribute("value", value);
 	numberInput.id = name;
 	return numberInput;
 }
-function createTextInput(name){
+export function createTextInput(name, value){
 	let textInput = document.createElement("input");
 	textInput.setAttribute("type", "text");
 	textInput.setAttribute("placeholder", "No " + name);
 	textInput.setAttribute("name", name);
+	textInput.setAttribute("value", value);
 	textInput.id = name;
 	return textInput;
 }
-function createCheckBox(name){
+export function createCheckBox(name, value){
 	let checkbox = document.createElement("input");
 	checkbox.setAttribute("type", "checkbox");
 	checkbox.setAttribute("value", "true");
 	checkbox.setAttribute("name", name);
+	checkbox.setAttribute("value", value);
 	checkbox.id = name;
 	return checkbox;
 }
-function createCheckBoxHidden(name){
+export function createCheckBoxHidden(name, value){
 	let boxHidden = document.createElement("input");
 	boxHidden.setAttribute("type", "hidden");
 	boxHidden.setAttribute("value", "false");
 	boxHidden.setAttribute("name", name);
+	boxHidden.setAttribute("value", value);
 	boxHidden.id = name;
 	return boxHidden;
 }

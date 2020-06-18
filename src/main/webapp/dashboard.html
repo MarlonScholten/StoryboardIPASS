@@ -11,6 +11,7 @@
 	<script type="module" src="js/services/MenuService.js"></script>
 	<script type="module" src="js/AddMedia.js"></script>
 	<script type="module" src="js/ShowAllMedia.js"></script>
+	<script type="module" src="js/ShowMedia.js"></script>
 	<title>Dashboard</title>
 </head>
 <body>
@@ -65,6 +66,38 @@
 						</div>
 					</section>
 				</form>
+			</div>
+			<div id="single-media-modal">
+				<div id="single-media">
+					<section class="row">
+						<div class="col-4">
+							<div id="single-image-holder">
+
+							</div>
+						</div>
+						<div class="col-8">
+							<h3 id="single-title">The title</h3>
+							<p id="single-description">The description</p>
+							<div id="single-genre-holder">
+
+							</div>
+						</div>
+					</section>
+					<section class="row">
+						<div class="col-4" id="single-media-details-container">
+
+						</div>
+						<div class="col-8">
+							<textarea class="notes-area" name="notes" form="add-media-form" placeholder="Leave some general thoughts about this story here. Anything goes!"></textarea>
+						</div>
+					</section>
+					<section class="row">
+						<div class="col-12 button-holder">
+							<input type="button" class="cancel" value="Cancel">
+							<input type="submit" class="save" value="Save">
+						</div>
+					</section>
+				</div>
 			</div>
 		</section>
 		<template id="card-template">

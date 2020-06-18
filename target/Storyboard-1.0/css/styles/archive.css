@@ -6,7 +6,8 @@
     align-content: flex-start;
     position: relative;
 }
-#add-media-modal{
+#add-media-modal,
+#single-media-modal{
     padding:20px;
     position: absolute;
     left: 0;
@@ -23,7 +24,8 @@
     opacity: 0;
     transition: visibility 0s, opacity 0.2s ease-in-out;
 }
-#add-media-modal #image-holder{
+#add-media-modal #image-holder,
+#single-media-modal #single-image-holder{
     background-color:#ededed;
     width: 100%;
     height:300px;
@@ -33,46 +35,70 @@
     background-size: cover;
     background-position: center;
 }
+#single-media-modal #single-description{
+    font-size:11px;
+    min-height:180px;
+}
 #add-media-modal #image-holder input{
     font-size:12px;
     max-width:80%;
     margin: 0 auto 10px;
     border-radius: 3px;
 }
-#add-media-modal #title{
+#add-media-modal #title,
+#single-media-modal #single-title{
     margin-bottom:25px;
 }
+#single-media-modal .notes-area{
+    width:100%;
+    border: 1px solid #9a9a9a;
+    border-radius: 2px;
+    padding: 4px 8px;
+    font-size: 11px;
+    height:200px;
+    resize: none;
+}
 #add-media-modal input[type=text],
+#single-media-modal input[type=text],
 #add-media-modal input[type=number],
-#add-media-modal textarea{
+#single-media-modal input[type=number],
+#add-media-modal textarea,
+#single-media-modal textarea{
     width:100%;
     border: 1px solid #9a9a9a;
     border-radius: 2px;
     padding: 4px 8px;
 }
-#add-media-modal #add-media-form section:nth-of-type(1){
+#add-media-modal #add-media-form section:nth-of-type(1),
+#single-media-modal #single-media section:nth-of-type(1){
     margin-bottom:30px;
 }
-#add-media-modal #add-media-form section:nth-of-type(2){
+#add-media-modal #add-media-form section:nth-of-type(2),
+#single-media-modal #single-media section:nth-of-type(2){
     margin-bottom:30px;
 }
-#add-media-modal #add-media-form .button-holder {
+#add-media-modal #add-media-form .button-holder,
+#single-media-modal .button-holder {
     text-align:right;
 }
 #add-media-modal #add-media-form input.save,
-#add-media-modal #add-media-form input.cancel{
+#add-media-modal #add-media-form input.cancel,
+#single-media-modal input.save,
+#single-media-modal input.cancel {
     width:100px;
     padding:8px 5px;
     font-size:13px;
     border: none;
     border-radius: 2px;
 }
-#add-media-modal #add-media-form input.save{
+#add-media-modal #add-media-form input.save,
+#single-media-modal input.save{
     background-color:#00695C;
     color:#fff;
     margin-left:10px;
 }
-#add-media-modal #add-media-form input.cancel{
+#add-media-modal #add-media-form input.cancel,
+#single-media-modal input.cancel {
     background-color:#ededed;
 }
 #add-media-modal input[type=text]:focus,
@@ -160,28 +186,45 @@
     font-weight:400;
 }
 #media-details-container label,
-#media-details-container input {
+#media-details-container input,
+#single-media-details-container label,
+#single-media-details-container input {
     font-size:13px;
     float:left;
 }
-#media-details-container label{
+#single-media-details-container label[for=link]{
+    width:100%;
+    position: relative;
+}
+#single-media-details-container .media-link{
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #666966;
+}
+#media-details-container label,
+#single-media-details-container label{
     text-transform:capitalize;
     width:66%;
     margin: 3px 0 0 0;
 }
-#media-details-container input[type=number]{
+#media-details-container input[type=number],
+#single-media-details-container input[type=number] {
     max-width:33%;
     margin-bottom: 10px;
     padding: 1px 2px;
 }
-#media-details-container input[type=text]{
+#media-details-container input[type=text],
+#single-media-details-container input[type=text]{
     margin-bottom:10px;
     padding: 2px 4px;
 }
-#media-details-container label[for=watched]{
+#media-details-container label[for=watched],
+#single-media-details-container label[for=watched]{
     width:90%;
 }
-#media-details-container input[type=checkbox]{
+#media-details-container input[type=checkbox],
+#single-media-details-container input[type=checkbox]{
     width:20px;
     height:20px;
     margin-top:3px;

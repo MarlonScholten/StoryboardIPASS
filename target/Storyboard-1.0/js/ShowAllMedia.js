@@ -1,4 +1,5 @@
 import { addMedia } from "./AddMedia.js";
+import { showSingleMedia } from "./ShowMedia.js";
 
 let mediaContainer = document.querySelector("#media-container");
 
@@ -29,7 +30,7 @@ function genAddMediaCard(){
 }
 
 function purgeMediaContainer(){
-	while(mediaContainer.children.length > 1){
+	while(mediaContainer.children.length > 2){
 		mediaContainer.removeChild(mediaContainer.firstChild);
 	}
 }
@@ -58,6 +59,9 @@ export function populateMediaContainer(){
 				let card = document.createElement("div");
 				card.classList.add("card");
 				card.classList.add("media-item");
+				card.addEventListener("click", function(){
+					showSingleMedia(r[i])
+				});
 				let title = document.createElement("h6");
 				title.classList.add("media-title");
 				title.innerText = r[i].title;
