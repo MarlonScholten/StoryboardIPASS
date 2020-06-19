@@ -24,6 +24,29 @@
     opacity: 0;
     transition: visibility 0s, opacity 0.2s ease-in-out;
 }
+#single-media-modal{
+    height:650px;
+    padding-top:10px;
+}
+#single-media {
+    position: relative;
+}
+#control-bar {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+#control-bar > li {
+    color: #666966;
+    margin-left:15px;
+}
+#control-bar > li:hover{
+    cursor:pointer;
+    color: #454645;
+}
 #add-media-modal #image-holder,
 #single-media-modal #single-image-holder{
     background-color:#ededed;
@@ -36,8 +59,10 @@
     background-position: center;
 }
 #single-media-modal #single-description{
-    font-size:11px;
-    min-height:180px;
+    font-size: 11px;
+    min-height: 145px;
+    max-height: 145px;
+    overflow: hidden;
 }
 #add-media-modal #image-holder input{
     font-size:12px;
@@ -47,7 +72,7 @@
 }
 #add-media-modal #title,
 #single-media-modal #single-title{
-    margin-bottom:25px;
+    margin-bottom:20px;
 }
 #single-media-modal .notes-area{
     width:100%;
@@ -151,6 +176,7 @@
 }
 #media-container .card.media-item .media-title{
     max-width:90%;
+    color:#212121;
 }
 #media-container .card.media-item .del-btn{
     position: absolute;
@@ -163,14 +189,14 @@
  }
 #media-container .card:active{
      transform:scale(1);
- }
- #media-container #add-media{
+}
+#media-container #add-media{
      background-color:transparent;
      border:2px dashed #00796B;
      display:flex;
      justify-content: center;
      align-items: center;
- }
+}
 #media-container #add-media:before{
     content:"\f0fe";
     display:block;
@@ -201,6 +227,24 @@
     right: 0;
     top: 0;
     color: #666966;
+}
+#single-media-details-container .media-link[disabled]:hover{
+    cursor:not-allowed;
+}
+#single-genre-holder {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 88px;
+    align-items: flex-end;
+}
+#single-genre-holder .genre-label{
+    font-size: 11px;
+    padding: 3px 6px;
+    border: 1px solid #ababab;
+    border-radius: 2px;
+    color: #ababab;
+    margin-right: 5px;
+    margin-bottom: 3px;
 }
 #media-details-container label,
 #single-media-details-container label{

@@ -52,6 +52,7 @@ export function createNumberInput(name, value){
 	return numberInput;
 }
 export function createTextInput(name, value){
+	(value===undefined) || (value==="undefined") ? value = "" : value;
 	let textInput = document.createElement("input");
 	textInput.setAttribute("type", "text");
 	textInput.setAttribute("placeholder", "No " + name);

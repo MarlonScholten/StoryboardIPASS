@@ -34,16 +34,6 @@ function purgeMediaContainer(){
 		mediaContainer.removeChild(mediaContainer.firstChild);
 	}
 }
-function deleteMedia(mediaId){
-	if(confirm("Really delete this media?")){
-		fetch("rest/user/media/"+mediaId, {method: 'DELETE',
-			headers: {
-				'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
-			}}).then(populateMediaContainer);
-	} else{
-		// Do nothing
-	}
-}
 export function populateMediaContainer(){
 	purgeMediaContainer();
 
@@ -66,14 +56,6 @@ export function populateMediaContainer(){
 				title.classList.add("media-title");
 				title.innerText = r[i].title;
 				card.append(title);
-				let delbtn = document.createElement("i");
-				delbtn.classList.add("far");
-				delbtn.classList.add("fa-times-circle");
-				delbtn.classList.add("del-btn");
-				delbtn.addEventListener("click", function(){
-					deleteMedia(r[i].id);
-				});
-				card.append(delbtn);
 
 				mediaContainer.prepend(card);
 			}
