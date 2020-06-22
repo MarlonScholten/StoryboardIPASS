@@ -48,6 +48,7 @@ export function createNumberInput(name, value){
 	numberInput.setAttribute("placeholder", "0");
 	numberInput.setAttribute("name", name);
 	numberInput.setAttribute("value", value);
+	numberInput.setAttribute("min", "0");
 	numberInput.id = name;
 	return numberInput;
 }
