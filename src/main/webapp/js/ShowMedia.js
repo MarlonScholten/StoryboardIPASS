@@ -86,9 +86,6 @@ export function showSingleMedia(media){
 	descEle.innerText = desc;
 	notesEle.innerText = notes;
 
-	thumbnailEle.style.backgroundImage = "url("+thumbnail+")";
-	console.log(thumbnail);
-
 	// remove all previously added genres
 	while (genreEle.firstChild) {
 		genreEle.removeChild(genreEle.lastChild);

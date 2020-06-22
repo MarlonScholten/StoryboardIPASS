@@ -78,7 +78,8 @@ export function showSingleMedia(media){
 
 	let title = media.title;
 	let desc = media.description;
-	let thumbnail = media.thumbnail;
+	let thumbSplit = media.thumbnail.split("/");
+	let thumbnail = "images/"+ thumbSplit[thumbSplit.length - 1];
 	let notes = media.notes;
 	let genres = media.genres;
 
@@ -86,6 +87,7 @@ export function showSingleMedia(media){
 	descEle.innerText = desc;
 	notesEle.innerText = notes;
 
+	// the beginning of the end
 	thumbnailEle.style.backgroundImage = "url("+thumbnail+")";
 	console.log(thumbnail);
 
