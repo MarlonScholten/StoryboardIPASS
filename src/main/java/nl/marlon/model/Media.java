@@ -12,7 +12,6 @@ public class Media {
 	protected File thumbnail;
 	protected String notes = "";
 	protected ArrayList<Genre> genres = new ArrayList<>();
-
 	// Notes and genres are optional
 
 	// Full constructor

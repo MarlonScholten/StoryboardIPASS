@@ -16,6 +16,7 @@ public class ContextListener implements ServletContextListener {
 
 		File braveImg = new File("brave-new-world.jpg");
 
+
 		Genre scifi= new Genre("Sci-fi");
 		Genre thriller= new Genre("Thriller");
 		Genre horror = new Genre("Horror");

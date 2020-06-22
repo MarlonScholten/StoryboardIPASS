@@ -11,7 +11,7 @@ import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,7 +35,7 @@ public class AnimeResource {
 		return Response.ok(allAnime).build();
 	}
 	@POST
-	@Produces(MediaType.APPLICATION_JSON)
+	@Consumes(MediaType.MULTIPART_FORM_DATA)
 	public Response addNewAnime(@Context SecurityContext msc,
 								@FormParam("title") String title,
 								@FormParam("description") String description,
