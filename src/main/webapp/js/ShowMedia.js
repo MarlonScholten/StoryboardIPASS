@@ -86,6 +86,7 @@ export function showSingleMedia(media){
 	descEle.innerText = desc;
 	notesEle.innerText = notes;
 
+	// the beginning of the end
 	thumbnailEle.style.backgroundImage = "url("+thumbnail+")";
 	console.log(thumbnail);
 
