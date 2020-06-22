@@ -78,7 +78,7 @@ export function showSingleMedia(media){
 
 	let title = media.title;
 	let desc = media.description;
-	let thumbnail = "images/"+ media.thumbnail.split("/")[-1];
+	let thumbnail = "images/"+ (media.thumbnail.split("/")[-1]);
 	let notes = media.notes;
 	let genres = media.genres;
 
@@ -87,7 +87,7 @@ export function showSingleMedia(media){
 	notesEle.innerText = notes;
 
 	// the beginning of the end
-	// thumbnailEle.style.backgroundImage = "url("+thumbnail+")";
+	thumbnailEle.style.backgroundImage = "url("+thumbnail+")";
 	console.log(thumbnail);
 
 	// remove all previously added genres
