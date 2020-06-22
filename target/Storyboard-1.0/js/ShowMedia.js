@@ -78,7 +78,8 @@ export function showSingleMedia(media){
 
 	let title = media.title;
 	let desc = media.description;
-	let thumbnail = "images/"+ (media.thumbnail.split("/")[-1]);
+	let thumbSplit = media.thumbnail.split("/");
+	let thumbnail = "images/"+ thumbSplit[thumbSplit.length - 1];
 	let notes = media.notes;
 	let genres = media.genres;
 

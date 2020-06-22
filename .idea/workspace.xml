@@ -7,7 +7,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b138f14a-b5ee-4dc8-b361-3902bb01afeb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/ShowMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/ShowMedia.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/js/ShowMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/js/ShowMedia.js" afterDir="false" />
     </list>
@@ -414,7 +413,7 @@
       <workItem from="1592385131553" duration="22886000" />
       <workItem from="1592475443436" duration="10475000" />
       <workItem from="1592567465146" duration="7120000" />
-      <workItem from="1592820490051" duration="4148000" />
+      <workItem from="1592820490051" duration="4406000" />
     </task>
     <servers />
   </component>
