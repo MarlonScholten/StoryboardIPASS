@@ -10,8 +10,13 @@ let sinModal = document.querySelector("#single-media-modal");
 function createLinkEle(link){
 	let anchor = document.createElement("a");
 	anchor.innerHTML = "<i class='fas fa-external-link-alt\'></i>";
-	anchor.href = link
 	anchor.classList.add("media-link");
+	if((link === "") || (link===undefined)){
+		anchor.removeAttribute("href");
+		anchor.setAttribute("disabled", "");
+	} else {
+		anchor.href = link;
+	}
 	anchor.setAttribute("target", "_blank");
 	return anchor;
 }
