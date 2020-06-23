@@ -6,10 +6,6 @@ import {createCheckBoxHidden} from "./AddMedia.js";
 import {populateMediaContainer} from "./ShowAllMedia.js";
 
 let sinModal = document.querySelector("#single-media-modal");
-let cancel = sinModal.querySelector(".cancel");
-cancel.addEventListener("click", function(){
-	closeModal(sinModal);
-});
 
 function createLinkEle(link){
 	let anchor = document.createElement("a");
@@ -30,8 +26,25 @@ function deleteMedia(mediaId){
 		// Do nothing
 	}
 }
+function patchMedia(mediaId, cat){
+	let formData = new FormData(document.querySelector("#single-media"));
+	let encData = new URLSearchParams(formData.entries());
+
+	const fetchoptions = {
+		method: 'PATCH',
+		headers: {
+			'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
+		},
+		body:encData
+	};
+
+	fetch("rest/user/"+cat+"/patch/"+mediaId, fetchoptions)
+		.then(function (response){
+			if(response.ok) return response.json();
+			else if(response.status===401) console.log("unauthorized")
+		});
+}
 export function showSingleMedia(media){
-	openModal(sinModal);
 	let allMenuItems = document.querySelector("#main-nav").children;
 	let currentCat;
 	for(let i=0; i<allMenuItems.length;i++){
@@ -73,7 +86,6 @@ export function showSingleMedia(media){
 	let titleEle = sinModal.querySelector("#single-title");
 	let descEle = sinModal.querySelector("#single-description");
 	let thumbnailEle = sinModal.querySelector("#single-image-holder");
-	let notesEle = sinModal.querySelector(".notes-area");
 	let genreEle = sinModal.querySelector("#single-genre-holder");
 
 	let title = media.title;
@@ -82,11 +94,44 @@ export function showSingleMedia(media){
 	let notes = media.notes;
 	let genres = media.genres;
 
+	let notesHolder = sinModal.querySelector("#notes-holder");
+	while (notesHolder.firstChild) {
+		notesHolder.removeChild(notesHolder.lastChild);
+	}
+	let notesEle = document.createElement("textarea");
+	notesEle.setAttribute("name", "notes");
+	notesEle.setAttribute("form", "single-media");
+	notesEle.setAttribute("placeholder", "Leave some general thoughts about this story here. Anything goes!");
+	notesEle.setAttribute("value", notes);
+	notesEle.classList.add("notes-area");
+	notesHolder.append(notesEle);
+
+	let buttonHolder = sinModal.querySelector(".button-holder");
+	while (buttonHolder.firstChild) {
+		buttonHolder.removeChild(buttonHolder.lastChild);
+	}
+	let saveBtn = document.createElement("input");
+	saveBtn.setAttribute("type", "submit");
+	saveBtn.classList.add("save");
+	let cancelBtn = document.createElement("input");
+	cancelBtn.setAttribute("type", "button");
+	cancelBtn.setAttribute("value", "Cancel");
+	cancelBtn.classList.add("cancel");
+	buttonHolder.append(
+		cancelBtn,
+		saveBtn
+	);
+	cancelBtn.addEventListener("click", function(){
+		closeModal(sinModal);
+	});
+
+	saveBtn.addEventListener("click", function(){
+		patchMedia(media.id, currentCat);
+	});
+
 	titleEle.innerText = title;
 	descEle.innerText = desc;
 	notesEle.innerText = notes;
-
-	console.log(thumbnail);
 
 	// remove all previously added genres
 	while (genreEle.firstChild) {
@@ -148,6 +193,7 @@ export function showSingleMedia(media){
 			);
 			break;
 	}
+	openModal(sinModal);
 }
 export function closeModal(modal){
 	modal.style.opacity = "0";

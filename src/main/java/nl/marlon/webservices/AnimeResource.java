@@ -35,7 +35,7 @@ public class AnimeResource {
 		return Response.ok(allAnime).build();
 	}
 	@POST
-	@Consumes(MediaType.MULTIPART_FORM_DATA)
+	@Produces(MediaType.APPLICATION_JSON)
 	public Response addNewAnime(@Context SecurityContext msc,
 								@FormParam("title") String title,
 								@FormParam("description") String description,
@@ -63,5 +63,30 @@ public class AnimeResource {
 		} else{
 			return Response.status(409).build();
 		}
+	}
+	@Path("patch/{id}")
+	@PATCH
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response patchAnime(@Context SecurityContext msc,
+							   @PathParam("id") String id,
+							   @FormParam("season") int season,
+							   @FormParam("episode") int episode,
+							   @FormParam("notes") String notes,
+							   @FormParam("link") String link) throws UnauthorizedException {
+		if(msc == null){
+			return Response.status(409).build();
+		}
+		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
+		Media targetMedia = user.getArchive().getMediaById(id);
+		if(targetMedia != null && targetMedia instanceof Anime){
+			Anime anime = (Anime) targetMedia;
+			System.out.println(anime);
+			anime.setSeason(season);
+			anime.setEpisode(episode);
+			anime.setLink(link);
+			anime.setNotes(notes);
+			return Response.ok(targetMedia).build();
+		}
+		return Response.status(409).build();
 	}
 }
