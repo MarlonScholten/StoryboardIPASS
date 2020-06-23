@@ -60,4 +60,26 @@ public class MangaResource {
 			return Response.status(409).build();
 		}
 	}
+	@Path("patch/{id}")
+	@PATCH
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response patchManga(@Context SecurityContext msc,
+							   @PathParam("id") String id,
+							   @FormParam("chapter") int chapter,
+							   @FormParam("notes") String notes,
+							   @FormParam("link") String link) throws UnauthorizedException {
+		if(msc == null){
+			return Response.status(409).build();
+		}
+		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
+		Media targetMedia = user.getArchive().getMediaById(id);
+		if(targetMedia != null && targetMedia instanceof Manga){
+			Manga manga = (Manga) targetMedia;
+			manga.setChapter(chapter);
+			manga.setLink(link);
+			manga.setNotes(notes);
+			return Response.ok(targetMedia).build();
+		}
+		return Response.status(409).build();
+	}
 }

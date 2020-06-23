@@ -60,4 +60,26 @@ public class ShowResource {
 			return Response.status(409).build();
 		}
 	}
+	@Path("patch/{id}")
+	@PATCH
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response patchShow(@Context SecurityContext msc,
+							   @PathParam("id") String id,
+							   @FormParam("season") int season,
+							   @FormParam("episode") int episode,
+							   @FormParam("notes") String notes) throws UnauthorizedException {
+		if(msc == null){
+			return Response.status(409).build();
+		}
+		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
+		Media targetMedia = user.getArchive().getMediaById(id);
+		if(targetMedia != null && targetMedia instanceof Show){
+			Show show = (Show) targetMedia;
+			show.setSeason(season);
+			show.setEpisode(episode);
+			show.setNotes(notes);
+			return Response.ok(targetMedia).build();
+		}
+		return Response.status(409).build();
+	}
 }

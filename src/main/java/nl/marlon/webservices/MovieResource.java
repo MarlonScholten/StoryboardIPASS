@@ -60,4 +60,26 @@ public class MovieResource {
 			return Response.status(409).build();
 		}
 	}
+	@Path("patch/{id}")
+	@PATCH
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response patchMovie(@Context SecurityContext msc,
+							   @PathParam("id") String id,
+							   @FormParam("director") String director,
+							   @FormParam("watched") boolean watched,
+							   @FormParam("notes") String notes) throws UnauthorizedException {
+		if(msc == null){
+			return Response.status(409).build();
+		}
+		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
+		Media targetMedia = user.getArchive().getMediaById(id);
+		if(targetMedia != null && targetMedia instanceof Movie){
+			Movie movie = (Movie) targetMedia;
+			movie.setDirector(director);
+			movie.setWatched(watched);
+			movie.setNotes(notes);
+			return Response.ok(targetMedia).build();
+		}
+		return Response.status(409).build();
+	}
 }

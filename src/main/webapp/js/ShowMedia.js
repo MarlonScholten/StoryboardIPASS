@@ -151,9 +151,9 @@ export function showSingleMedia(media){
 		genreEle.append(label);
 	}
 
+	let label = createLabelFor("link");
 	switch(currentCat) {
 		case "anime":
-			let label = createLabelFor("link");
 			label.append(createLinkEle(media.link));
 			detailsContainer.append(
 				createLabelFor("season"),
@@ -173,28 +173,29 @@ export function showSingleMedia(media){
 			);
 			break;
 		case "manga":
+			label.append(createLinkEle(media.link));
 			detailsContainer.append(
 				createLabelFor("chapter"),
-				createNumberInput("chapter"),
-				createLabelFor("link"),
-				createTextInput("link")
+				createNumberInput("chapter" , media.chapter),
+				label,
+				createTextInput("link", media.link)
 			);
 			break;
 		case "movies":
 			detailsContainer.append(
 				createLabelFor("director"),
-				createTextInput("director"),
+				createTextInput("director", media.director),
 				createLabelFor("watched"),
-				createCheckBox("watched"),
+				createCheckBox("watched", media.watched),
 				createCheckBoxHidden("watched")
 			);
 			break;
 		case "shows":
 			detailsContainer.append(
 				createLabelFor("season"),
-				createNumberInput("season"),
+				createNumberInput("season", media.season),
 				createLabelFor("episode"),
-				createNumberInput("episode")
+				createNumberInput("episode", media.episode)
 			);
 			break;
 	}

@@ -42,7 +42,7 @@ public class ContextListener implements ServletContextListener {
 		Anime vinland = new Anime("Vinland saga", "Vikings", braveImg, "realistic", bravegenres, 1, 5, "");
 		Anime towergod = new Anime("Tower of God", "Tower of God centers around a boy called Twenty-Fifth Bam, who has spent most of his life trapped beneath a vast and mysterious Tower, with only his close friend, Rachel, to keep him company. When Rachel enters the Tower, Bam manages to open the door into it as well, and faces challenges at each floor of this tower as he tries to find his closest companion.", braveImg, "mysterious", towergenres, 1, 13, "https://www.kickassanime.rs/anime/kami-no-tou-346996/episode-12-914903");
 
-		Movie matrix =  new Movie("The Matrix", "blue pill or red pill", braveImg, "Lana & Lilly Wachowski", true);
+		Movie matrix =  new Movie("The Matrix", "blue pill or red pill", braveImg, "Lana & Lilly Wachowski", false);
 		Movie fightclub =  new Movie("Fight Club", "its about a fight club", braveImg, "David Fincher", true);
 		Movie killbill =  new Movie("Kill Bill", "the bride needs to kill bill", braveImg, "Quentin Tarantino", true);
 

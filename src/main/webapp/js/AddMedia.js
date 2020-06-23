@@ -67,7 +67,9 @@ export function createCheckBox(name, value){
 	checkbox.setAttribute("type", "checkbox");
 	checkbox.setAttribute("value", "true");
 	checkbox.setAttribute("name", name);
-	checkbox.setAttribute("value", value);
+	if(value){
+		checkbox.checked = true;
+	}
 	checkbox.id = name;
 	return checkbox;
 }
@@ -76,7 +78,6 @@ export function createCheckBoxHidden(name, value){
 	boxHidden.setAttribute("type", "hidden");
 	boxHidden.setAttribute("value", "false");
 	boxHidden.setAttribute("name", name);
-	boxHidden.setAttribute("value", value);
 	boxHidden.id = name;
 	return boxHidden;
 }
