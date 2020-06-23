@@ -8,8 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="b138f14a-b5ee-4dc8-b361-3902bb01afeb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/AnimeResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/AnimeResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/BookResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/BookResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/ShowMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/ShowMedia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/services/MenuService.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/services/MenuService.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/webservices/AnimeResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/webservices/AnimeResource.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/js/ShowMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/js/ShowMedia.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/marlon/webservices/AnimeResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/marlon/webservices/AnimeResource.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -415,7 +420,7 @@
       <workItem from="1592475443436" duration="10475000" />
       <workItem from="1592567465146" duration="7120000" />
       <workItem from="1592820490051" duration="4406000" />
-      <workItem from="1592902096851" duration="17695000" />
+      <workItem from="1592902096851" duration="20653000" />
     </task>
     <servers />
   </component>
@@ -514,10 +519,10 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="533" y="199" width="1198" height="849" key="SettingsEditor/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592227293560" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1590924388093">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1592928639254">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1590924388093" />
+    <state width="498" height="446" key="SwitcherDM/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592928639254" />
     <state x="782" y="518" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1591879894662">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
@@ -542,9 +547,9 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="681" y="259" width="672" height="677" key="run.anything.popup/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592385700762" />
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1591628145929">
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup" timestamp="1592928637679">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1591628145929" />
+    <state x="687" y="243" width="672" height="678" key="search.everywhere.popup/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1592928637679" />
   </component>
 </project>

@@ -167,9 +167,9 @@ export function showSingleMedia(media){
 		case "books":
 			detailsContainer.append(
 				createLabelFor("author"),
-				createTextInput("author"),
+				createTextInput("author", media.author),
 				createLabelFor("page"),
-				createNumberInput("page")
+				createNumberInput("page", media.page)
 			);
 			break;
 		case "manga":

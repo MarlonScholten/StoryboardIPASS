@@ -80,7 +80,6 @@ public class AnimeResource {
 		Media targetMedia = user.getArchive().getMediaById(id);
 		if(targetMedia != null && targetMedia instanceof Anime){
 			Anime anime = (Anime) targetMedia;
-			System.out.println(anime);
 			anime.setSeason(season);
 			anime.setEpisode(episode);
 			anime.setLink(link);

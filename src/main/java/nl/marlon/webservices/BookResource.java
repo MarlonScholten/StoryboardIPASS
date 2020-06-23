@@ -61,4 +61,26 @@ public class BookResource {
 			return Response.status(409).build();
 		}
 	}
+	@Path("patch/{id}")
+	@PATCH
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response patchBook(@Context SecurityContext msc,
+							   @PathParam("id") String id,
+							   @FormParam("author") String author,
+							   @FormParam("page") int page,
+							   @FormParam("notes") String notes) throws UnauthorizedException {
+		if(msc == null){
+			return Response.status(409).build();
+		}
+		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
+		Media targetMedia = user.getArchive().getMediaById(id);
+		if(targetMedia != null && targetMedia instanceof Book){
+			Book book = (Book) targetMedia;
+			book.setAuthor(author);
+			book.setPage(page);
+			book.setNotes(notes);
+			return Response.ok(targetMedia).build();
+		}
+		return Response.status(409).build();
+	}
 }
