@@ -114,14 +114,37 @@ function defaultActive(catString){
 		}
 	}
 }
+function logOut(){
+	window.sessionStorage.clear();
+	window.location.assign("/index.html");
+}
+function genLogout(){
+	let logout = document.createElement("a");
+	logout.id = "logout-btn";
+	logout.setAttribute("role", "button");
+	let span = document.createElement("span");
+	span.classList.add("logout-text");
+	span.innerText = "Log out";
+	let icon = document.createElement("i");
+	icon.classList.add("fas");
+	icon.classList.add("fa-power-off");
+	span.prepend(icon);
+	logout.append(span);
+	logout.addEventListener("click", logOut);
+	return logout;
+}
 getCategories().then(myCats => {
-	let target =  document.querySelector("#main-nav");
+	let mainNav =  document.querySelector("#main-nav");
+	let navContainer = document.querySelector("#nav-container");
 
 	for(let i=0; i<myCats.length;i++){
-		target.append(genMenuItem(myCats[i]));
+		mainNav.append(genMenuItem(myCats[i]));
 	}
+
+	navContainer.append(genLogout());
+
 	if(!(myCats.length === 5)){
-		target.append(genCatSelect())
+		mainNav.append(genCatSelect())
 	}
 	if(myCats.length >= 1){
 		if(localStorage.getItem("lastCategory") === null){

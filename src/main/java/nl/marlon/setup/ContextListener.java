@@ -47,7 +47,7 @@ public class ContextListener implements ServletContextListener {
 		Movie killbill =  new Movie("Kill Bill", "the bride needs to kill bill", braveImg, "Quentin Tarantino", true);
 
 		Manga madeabyss = new Manga("Made in Abyss", "A dark adventure going all the way down into the abyss", braveImg,70, "");
-		Manga berserk = new Manga("Berserk", "A dark adventure", braveImg,30, "");
+		Manga berserk = new Manga("Berserk", "A dark adventure",  braveImg,30, "");
 		Manga fma = new Manga("Full Metal Alchemist", "Magic comes at a cost", braveImg,30, "");
 
 		Show breakingbad = new Show("Breaking bad", "selling meth is dangerous", braveImg, 5, 12);

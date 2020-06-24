@@ -2,6 +2,7 @@
     box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
     background-color:#2e2e2e;
     z-index:1;
+    position:relative;
 }
 #main-nav{
     display:flex;
@@ -81,4 +82,50 @@
     font-weight:400;
     margin-bottom:0px;
     text-align:center;
+    font-size:27px;
+}
+#nav-container #logout-btn {
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#nav-container #logout-btn:hover {
+    background-color: #3e3e3e;
+}
+#nav-container #logout-btn:hover * {
+    color:#ececec !important;
+}
+#nav-container #logout-btn .logout-text{
+    color: #b8b8b8;
+    transform:translateX(-5px);
+    font-weight:500;
+}
+#nav-container #logout-btn .logout-text > i{
+    color:#a0a0a0;
+    font-size: 13px;
+    margin-top: 3px;
+    margin-right:10px;
+}
+
+@media only screen and (min-width: 992px) and (max-width:1860px){
+    #main-title-container > h2 {
+        display: none;
+    }
+    #main-title-container{
+        background-image: url(../../images/logo.png);
+        height: 70px;
+        background-size: 80%;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+@media only screen and (min-width: 1400px) and (max-width:1860px){
+    #main-title-container{
+        height: 12vh;
+        background-size: 75%;
+    }
 }
