@@ -1,17 +1,49 @@
 #media-container{
-    background-color:#3f3f3f;
-    padding:40px;
-    display:flex;
+    background-color: #3f3f3f;
+    padding: 10px 40px 40px 40px;
+    display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     position: relative;
+    transition: all 0.2s ease-in-out;
+    height: calc(100% - 67px);
+}
+#archive-controls {
+    background-color: #3f3f3f;
+    padding: 40px 50px 0px 50px;
+}
+#archive-controls #genre-btn{
+    color: #efefef;
+    background-color: #057567;
+    border-radius: 2px;
+    border: none;
+    padding: 2px 14px;
+    font-size: 15px;
+}
+#archive-controls #genre-btn:hover{
+    background-color:#05685b;
+}
+#archive-controls #genre-btn:focus{
+    outline: none;
+}
+#genre-mngr-modal{
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    background-color: #fff;
+    position: absolute;
+    z-index: 1;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    transition: visibility 0s, opacity 0.2s ease-in-out;
+    left: 30%;
+    border-radius: 3px;
+    padding: 20px;
 }
 #add-media-modal,
 #single-media-modal{
     padding:20px;
     position: absolute;
     left: 0;
-    right: 20%;
+    right: 10%;
     margin:auto;
     top: 0;
     bottom:20%;

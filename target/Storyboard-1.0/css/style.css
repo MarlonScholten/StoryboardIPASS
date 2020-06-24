@@ -10,7 +10,3 @@ main{
 main>.row{
     height:100%;
 }
-#nav-container,
-#media-container {
-    height: 100%;
-}

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=max-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/select/bootstrap-select.min.css">
@@ -28,80 +28,91 @@
 				<a class="menu-href" role="button"><span class="nav-label"></span></a>
 			</template>
 		</section>
-		<section id="media-container" class="col-10 col-lg-11">
-			<div class="card" id="add-media">
-				<h4 unselectable="on" class="unselectable">Add media</h4>
-			</div>
-			<div id="add-media-modal">
-				<form id="add-media-form" method="POST" enctype='multipart/form-data'>
-					<section class="row">
-						<div class="col-4">
-							<div id="image-holder">
-								<input type="file" id="thumbnail" name="thumbnail" accept="image/x-png,image/gif,image/jpeg">
-							</div>
-						</div>
-						<div class="col-8">
-							<input type="text" name="title" id="title" placeholder="Insert a title here" required>
-							<textarea name="description" id="description" form="add-media-form" placeholder="Write the general synopsis of the story here. (or copy-paste it)"></textarea>
-							<div id="genre-holder">
-								<label for="genres">Genres</label>
-								<select name="genres" id="genres" class="selectpicker" multiple="multiple">
+		<section class="col-10 col-lg-11 no-pad">
+			<section id="archive-controls" class="col-12">
+				<button id="genre-btn">Genre manager</button>
+			</section>
+			<div id="genre-mngr-modal">
+				<h5>Genre manager</h5>
+				<form id="genre-mngr-form">
 
-								</select>
-							</div>
-						</div>
-					</section>
-					<section class="row">
-						<div class="col-4" id="media-details-container">
-
-						</div>
-						<div class="col-8">
-							<textarea class="notes-area" name="notes" form="add-media-form" placeholder="Leave some general thoughts about this story here. Anything goes!"></textarea>
-						</div>
-					</section>
-					<section class="row">
-						<div class="col-12 button-holder">
-							<input type="button" class="cancel" value="Cancel">
-							<input type="submit" class="save" value="Save">
-						</div>
-					</section>
 				</form>
 			</div>
-			<div id="single-media-modal">
-				<form id="single-media">
-					<ul id="control-bar">
+			<section id="media-container" class="col-12">
+				<div class="card" id="add-media">
+					<h4 unselectable="on" class="unselectable">Add media</h4>
+				</div>
+				<div id="add-media-modal">
+					<form id="add-media-form" method="POST" enctype='multipart/form-data'>
+						<section class="row">
+							<div class="col-4">
+								<div id="image-holder">
+									<input type="file" id="thumbnail" name="thumbnail" accept="image/x-png,image/gif,image/jpeg">
+								</div>
+							</div>
+							<div class="col-8">
+								<input type="text" name="title" id="title" placeholder="Insert a title here" required>
+								<textarea name="description" id="description" form="add-media-form" placeholder="Write the general synopsis of the story here. (or copy-paste it)"></textarea>
+								<div id="genre-holder">
+									<label for="genres">Genres</label>
+									<select name="genres" id="genres" class="selectpicker" multiple="multiple">
 
-					</ul>
-					<section class="row">
-						<div class="col-4">
-							<div id="single-image-holder">
+									</select>
+								</div>
+							</div>
+						</section>
+						<section class="row">
+							<div class="col-4" id="media-details-container">
 
 							</div>
-						</div>
-						<div class="col-8">
-							<h3 id="single-title">The title</h3>
-							<p id="single-description">The description</p>
-							<div id="single-genre-holder">
+							<div class="col-8">
+								<textarea class="notes-area" name="notes" form="add-media-form" placeholder="Leave some general thoughts about this story here. Anything goes!"></textarea>
+							</div>
+						</section>
+						<section class="row">
+							<div class="col-12 button-holder">
+								<input type="button" class="cancel" value="Cancel">
+								<input type="submit" class="save" value="Save">
+							</div>
+						</section>
+					</form>
+				</div>
+				<div id="single-media-modal">
+					<form id="single-media">
+						<ul id="control-bar">
+
+						</ul>
+						<section class="row">
+							<div class="col-4">
+								<div id="single-image-holder">
+
+								</div>
+							</div>
+							<div class="col-8">
+								<h3 id="single-title">The title</h3>
+								<p id="single-description">The description</p>
+								<div id="single-genre-holder">
+
+								</div>
+							</div>
+						</section>
+						<section class="row">
+							<div class="col-4" id="single-media-details-container">
 
 							</div>
-						</div>
-					</section>
-					<section class="row">
-						<div class="col-4" id="single-media-details-container">
+							<div class="col-8" id="notes-holder">
 
-						</div>
-						<div class="col-8" id="notes-holder">
-
-						</div>
-					</section>
-					<section class="row">
-						<div class="col-12 button-holder">
-							<input type="button" class="cancel" value="Cancel">
-							<input type="submit" class="save" value="Save">
-						</div>
-					</section>
-				</form>
-			</div>
+							</div>
+						</section>
+						<section class="row">
+							<div class="col-12 button-holder">
+								<input type="button" class="cancel" value="Cancel">
+								<input type="submit" class="save" value="Save">
+							</div>
+						</section>
+					</form>
+				</div>
+			</section>
 		</section>
 		<template id="card-template">
 			<div class="card"></div>
