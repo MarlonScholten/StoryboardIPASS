@@ -17,7 +17,7 @@ function getCurrentCat(){
 }
 
 function genAddMediaCard(){
-	let addMediaEle = document.createElement("div");
+	let addMediaEle = document.createElement("li");
 	addMediaEle.classList.add("card");
 	addMediaEle.id = "add-media";
 	let heading = document.createElement("h4");
@@ -50,7 +50,7 @@ export function populateMediaContainer(){
 			else if(response.status===401) console.log("unauthorized");
 		}).then(r => {
 			for(let i=0;i<r.length;i++){
-				let card = document.createElement("div");
+				let card = document.createElement("li");
 				card.classList.add("card");
 				card.classList.add("media-item");
 				card.addEventListener("click", function(){

@@ -22,6 +22,8 @@ function resetImgPreview(){
 	imgHolder.style.backgroundImage = "";
 	imgInput.style.backgroundColor = "";
 }
+
+// These functions differ from the usual opening and closing of a modal.
 function closeModal(){
 	modalForm.reset();
 	resetImgPreview();
@@ -73,7 +75,7 @@ export function createCheckBox(name, value){
 	checkbox.id = name;
 	return checkbox;
 }
-export function createCheckBoxHidden(name, value){
+export function createCheckBoxHidden(name){
 	let boxHidden = document.createElement("input");
 	boxHidden.setAttribute("type", "hidden");
 	boxHidden.setAttribute("value", "false");
@@ -112,23 +114,43 @@ function populateGenrePicker(){
 	$('.selectpicker').selectpicker('render');
 }
 populateGenrePicker();
+
+function validateForm(){
+	let required = modalForm.querySelectorAll("[required]");
+	let valid = [];
+	required.forEach((input) => {
+		if(input.value !== "" && input.value !== null){
+			valid.push(true);
+		} else{
+			valid.push(false);
+		}
+	});
+	if(valid.includes(false)){
+		return false;
+	}
+	return true;
+}
 function postFormTo(resource){
-	let formData = new FormData(document.querySelector("#add-media-form"));
-	let encData = new URLSearchParams(formData.entries());
+	if(validateForm()){
+		let formData = new FormData(document.querySelector("#add-media-form"));
+		let encData = new URLSearchParams(formData.entries());
 
-	const fetchoptions = {
-		method: 'POST',
-		headers: {
-			'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
-		},
-		body:encData
-	};
+		const fetchoptions = {
+			method: 'POST',
+			headers: {
+				'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
+			},
+			body:encData
+		};
 
-	return fetch("rest/user/"+resource, fetchoptions)
-		.then(function (response){
-			if(response.ok) return response.json();
-			else if(response.status===401) console.log("unauthorized")
-		})
+		return fetch("rest/user/"+resource, fetchoptions)
+			.then(function (response){
+				if(response.ok) return response.json();
+				else if(response.status===401) console.log("unauthorized")
+			})
+	} else{
+		return new Promise((resolve, reject) => reject);
+	}
 }
 export function addMedia(){
 	let allMenuItems = document.querySelector("#main-nav").children;
@@ -198,6 +220,6 @@ export function addMedia(){
 	}
 	openModal();
 	modalForm.querySelector(".save").addEventListener("click", function(){
-		postFormTo(currentCat).then(r => console.log(r));
+		postFormTo(currentCat).then(r => r);
 	});
 }
