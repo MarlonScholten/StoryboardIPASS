@@ -1,12 +1,12 @@
 #media-container{
     background-color: #3f3f3f;
     padding: 10px 40px 40px 40px;
+    height: calc(100% - 68px);
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
     position: relative;
     transition: all 0.2s ease-in-out;
-    max-height: calc(100% - 69px);
     overflow: hidden;
     list-style: none;
     overflow-y: auto;
