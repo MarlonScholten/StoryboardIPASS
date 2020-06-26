@@ -75,6 +75,14 @@ export function createCheckBox(name, value){
 	checkbox.id = name;
 	return checkbox;
 }
+export function createCheckBoxAlt(name, value){
+	let checkbox = document.createElement("input");
+	checkbox.setAttribute("type", "checkbox");
+	checkbox.setAttribute("value", value);
+	checkbox.setAttribute("name", name);
+	checkbox.id = value;
+	return checkbox;
+}
 export function createCheckBoxHidden(name){
 	let boxHidden = document.createElement("input");
 	boxHidden.setAttribute("type", "hidden");

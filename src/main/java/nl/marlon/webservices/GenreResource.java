@@ -10,6 +10,7 @@ import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.SecurityContext;
 import java.util.ArrayList;
+import java.util.List;
 
 
 @Path("user/genres")
@@ -44,22 +45,26 @@ public class GenreResource {
 		}
 	}
 	@DELETE
-	@Path("/delete/{name}")
+	@Path("/delete")
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response deleteGenre(@Context SecurityContext msc,
-								@PathParam("name") String name) throws UnauthorizedException {
+								@FormParam("genres") List<String> genres) throws UnauthorizedException {
 		if(msc == null){
 			System.out.println("msc is null");
 			return Response.status(409).build();
 		}
 		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
-		Genre target = user.getArchive().getGenreByName(name);
-		if(!(target == null)){
-			if(user.getArchive().deleteGenre(target)){
-				return Response.ok().build();
+		ArrayList<Genre> genreObjs = new ArrayList<>();
+		for(String genre : genres){
+			Genre target = user.getArchive().getGenreByName(genre);
+			if(target != null){
+				genreObjs.add(target);
 			}
 		}
-		return Response.status(409).build();
+		for(Genre genre : genreObjs){
+			user.getArchive().deleteGenre(genre);
+		}
+		return Response.ok().build();
 	}
 }
 

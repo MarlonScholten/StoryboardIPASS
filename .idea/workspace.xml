@@ -8,30 +8,16 @@
   <component name="ChangeListManager">
     <list default="true" id="b138f14a-b5ee-4dc8-b361-3902bb01afeb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/model/Anime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/model/Anime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/model/Archive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/model/Archive.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/setup/ContextListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/setup/ContextListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/GenreResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/marlon/webservices/GenreResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/css/styles/archive.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/styles/archive.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/AddMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/AddMedia.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/js/GenreManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/GenreManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/js/ShowAllMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/js/ShowAllMedia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/model/Anime.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/model/Anime.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/model/Archive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/model/Archive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/setup/ContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/setup/ContextListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/webservices/GenreResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/WEB-INF/classes/nl/marlon/webservices/GenreResource.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/css/styles/archive.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/css/styles/archive.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/dashboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/js/AddMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/js/AddMedia.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/js/GenreManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/js/GenreManager.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Storyboard-1.0/js/ShowAllMedia.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Storyboard-1.0/js/ShowAllMedia.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/marlon/model/Anime.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/marlon/model/Anime.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/marlon/model/Archive.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/marlon/model/Archive.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/marlon/setup/ContextListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/marlon/setup/ContextListener.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/nl/marlon/webservices/GenreResource.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/marlon/webservices/GenreResource.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -459,7 +445,8 @@
       <workItem from="1593094156550" duration="6589000" />
       <workItem from="1593101246344" duration="355000" />
       <workItem from="1593165592975" duration="18778000" />
-      <workItem from="1593184874159" duration="1190000" />
+      <workItem from="1593184874159" duration="1270000" />
+      <workItem from="1593187330252" duration="3941000" />
     </task>
     <servers />
   </component>
@@ -502,54 +489,54 @@
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
     <state x="805" y="312" key="FileChooserDialogImpl/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1589789942275" />
-    <state width="805" height="684" key="GridCell.Tab.0.bottom" timestamp="1593184950282">
+    <state width="1776" height="272" key="GridCell.Tab.0.bottom" timestamp="1593189618910">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="805" height="684" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593184950282" />
-    <state width="805" height="684" key="GridCell.Tab.0.center" timestamp="1593184950282">
+    <state width="1776" height="272" key="GridCell.Tab.0.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593189618910" />
+    <state width="1776" height="272" key="GridCell.Tab.0.center" timestamp="1593189618910">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="805" height="684" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593184950282" />
-    <state width="805" height="684" key="GridCell.Tab.0.left" timestamp="1593184950282">
+    <state width="1776" height="272" key="GridCell.Tab.0.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593189618910" />
+    <state width="1776" height="272" key="GridCell.Tab.0.left" timestamp="1593189618909">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="805" height="684" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593184950282" />
-    <state width="805" height="684" key="GridCell.Tab.0.right" timestamp="1593184950282">
+    <state width="1776" height="272" key="GridCell.Tab.0.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593189618909" />
+    <state width="1776" height="272" key="GridCell.Tab.0.right" timestamp="1593189618910">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="805" height="684" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593184950282" />
-    <state width="1776" height="272" key="GridCell.Tab.1.bottom" timestamp="1593184853526">
+    <state width="1776" height="272" key="GridCell.Tab.0.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593189618910" />
+    <state width="1776" height="272" key="GridCell.Tab.1.bottom" timestamp="1593189618911">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="272" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593184853526" />
-    <state width="1776" height="272" key="GridCell.Tab.1.center" timestamp="1593184853526">
+    <state width="1776" height="272" key="GridCell.Tab.1.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593189618911" />
+    <state width="1776" height="272" key="GridCell.Tab.1.center" timestamp="1593189618911">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="272" key="GridCell.Tab.1.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593184853526" />
-    <state width="1776" height="272" key="GridCell.Tab.1.left" timestamp="1593184853526">
+    <state width="1776" height="272" key="GridCell.Tab.1.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593189618911" />
+    <state width="1776" height="272" key="GridCell.Tab.1.left" timestamp="1593189618911">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="272" key="GridCell.Tab.1.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593184853526" />
-    <state width="1776" height="272" key="GridCell.Tab.1.right" timestamp="1593184853526">
+    <state width="1776" height="272" key="GridCell.Tab.1.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593189618911" />
+    <state width="1776" height="272" key="GridCell.Tab.1.right" timestamp="1593189618911">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="272" key="GridCell.Tab.1.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593184853526" />
-    <state width="1776" height="272" key="GridCell.Tab.2.bottom" timestamp="1593184853526">
+    <state width="1776" height="272" key="GridCell.Tab.1.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593189618911" />
+    <state width="1776" height="272" key="GridCell.Tab.2.bottom" timestamp="1593189618912">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="272" key="GridCell.Tab.2.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593184853526" />
-    <state width="1776" height="272" key="GridCell.Tab.2.center" timestamp="1593184853526">
+    <state width="1776" height="272" key="GridCell.Tab.2.bottom/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593189618912" />
+    <state width="1776" height="272" key="GridCell.Tab.2.center" timestamp="1593189618912">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="272" key="GridCell.Tab.2.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593184853526" />
-    <state width="1776" height="272" key="GridCell.Tab.2.left" timestamp="1593184853526">
+    <state width="1776" height="272" key="GridCell.Tab.2.center/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593189618912" />
+    <state width="1776" height="272" key="GridCell.Tab.2.left" timestamp="1593189618911">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="272" key="GridCell.Tab.2.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593184853526" />
-    <state width="1776" height="272" key="GridCell.Tab.2.right" timestamp="1593184853526">
+    <state width="1776" height="272" key="GridCell.Tab.2.left/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593189618911" />
+    <state width="1776" height="272" key="GridCell.Tab.2.right" timestamp="1593189618912">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>
-    <state width="1776" height="272" key="GridCell.Tab.2.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593184853526" />
+    <state width="1776" height="272" key="GridCell.Tab.2.right/0.0.2048.1112/-1920.0.1920.1040@0.0.2048.1112" timestamp="1593189618912" />
     <state x="571" y="224" key="Maven.ArtifactSearchDialog" timestamp="1592833050466">
       <screen x="0" y="0" width="2048" height="1112" />
     </state>

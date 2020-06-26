@@ -112,6 +112,7 @@
     overflow-y: auto;
     max-height: 25vh;
     min-height: 27px;
+    width: 100%;
 }
 #genre-mngr-modal #genre-list-holder li > label{
     font-size: 14px;

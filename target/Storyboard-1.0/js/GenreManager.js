@@ -2,6 +2,7 @@ import {openModal} from "./ShowMedia.js";
 import {closeModal} from "./ShowMedia.js";
 import {createLabelFor} from "./AddMedia.js";
 import {createCheckBox} from "./AddMedia.js";
+import {createCheckBoxAlt} from "./AddMedia.js";
 
 let genreModal = document.querySelector("#genre-mngr-modal");
 let genreToggler = document.querySelector("#genre-btn");
@@ -10,7 +11,8 @@ let submitHolder = document.querySelector('#submit-holder');
 
 function genDelSubmit(){
 	let button = document.createElement("button");
-	button.setAttribute("value", "");
+	button.setAttribute("type", "submit");
+	button.setAttribute("form", "genre-mngr-form");
 	button.id = "genre-remove";
 	button.setAttribute("disabled", "");
 	let icon = document.createElement("i");
@@ -18,20 +20,6 @@ function genDelSubmit(){
 	icon.classList.add("fa-trash-alt");
 	button.append(icon);
 	return button;
-}
-async function deleteGenre(name){
-	const fetchoptions = {
-		method: 'DELETE',
-		headers: {
-			'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
-		}
-	};
-	return fetch("rest/user/genres/delete/" + name, fetchoptions)
-		.then(function (response){
-			if(response.ok) return response;
-			else if(response.status===401) console.log("unauthorized");
-			else if(response.status===409) console.log("cannot delete");
-		});
 }
 genreToggler.addEventListener("click", function(){
 	openModal(genreModal);
@@ -49,19 +37,27 @@ genreToggler.addEventListener("click", function(){
 			delBtn.setAttribute("disabled", "");
 		}
 	});
-	// TODO: 1 voor 1 een genre deleten blijkt goed te gaan, maar bij meerdere tegelijkertijd gaat alles fout
 	delBtn.addEventListener("click", function(){
-		let checkboxes = genreForm.querySelectorAll("input[type=checkbox]");
-		for(let i=0;i<checkboxes.length;i++){
-			if(checkboxes[i].checked){
-				deleteGenre(checkboxes[i].name).then(r =>{
-					genreList.removeChild(checkboxes[i].parentNode.parentNode);
-				});
-			}
-		}
+		let formData = new FormData(genreForm);
+		let encData = new URLSearchParams(formData.entries());
+
+		const fetchoptions = {
+			method: 'DELETE',
+			headers: {
+				'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
+			},
+			body:encData
+		};
+
+		return fetch("rest/user/genres/delete", fetchoptions)
+			.then(function (response){
+				if(response.ok) return response;
+				else if(response.status===401) console.log("unauthorized")
+			})
 	});
 	populateGenreList()
 });
+
 let done = genreModal.querySelector(".save");
 done.addEventListener("click", function(){
 	closeModal(genreModal);
@@ -70,13 +66,24 @@ done.addEventListener("click", function(){
 });
 
 function createGenreItem(name){
-	let li = document.createElement("li");
 	let label = createLabelFor(name);
-	label.append(
-		createCheckBox(name)
+	let option = document.createElement("option");
+	option.setAttribute("value", name);
+	option.setAttribute("id", name);
+	$(option).mousedown(function(){
+		let $self = $(this);
+
+		if ($self.prop("selected"))
+			$self.prop("selected", false);
+		else
+			$self.prop("selected", true);
+
+		return false;
+	});
+	option.append(
+		label
 	);
-	li.append(label);
-	return li;
+	return option;
 }
 
 function getGenres(){
@@ -139,11 +146,12 @@ function addNewGenre(){
 		});
 }
 function boxesAreChecked(){
-	let checkboxes = genreForm.querySelectorAll("input[type=checkbox]");
-	for(let i=0;i<checkboxes.length;i++){
-		if(checkboxes[i].checked){
-			return true;
-		}
-	}
-	return false;
+	// let checkboxes = genreForm.querySelectorAll("input[type=checkbox]");
+	// for(let i=0;i<checkboxes.length;i++){
+	// 	if(checkboxes[i].checked){
+	// 		return true;
+	// 	}
+	// }
+	// return false;
+	return true;
 }
