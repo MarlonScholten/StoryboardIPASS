@@ -35,26 +35,21 @@
 			</section>
 			<div id="genre-mngr-modal">
 				<h5>Genre manager</h5>
-				<form id="genre-mngr-form">
+				<div id="genre-mngr-container">
 					<input name="genre-name" class="genre-txt-input" placeholder="New genre">
-					<input role="button" id="add-genre" value="Add"></input>
-					<i id="genre-remove" class="fas fa-trash-alt"></i>
-					<ul id="genre-list-holder">
-						<template id="genre-mngr-li-template">
-							<li>
-								<label for="option-1" unselectable="on" class="unselectable">
-									Adventure
-									<input type="checkbox" name="option-1" id="option-1" value="true">
-									<input type="hidden" name="option-1" id="option-1-hidden" value="false">
-								</label>
-							</li>
-						</template>
-					</ul>
+					<input role="button" id="add-genre" value="Add">
+					<span id="submit-holder">
+
+					</span>
+					<form id="genre-mngr-form">
+						<ul id="genre-list-holder">
+
+						</ul>
+					</form>
 					<div class="btn-holder">
-						<input type="button" class="cancel" value="Cancel">
-						<input class="save" type="submit" value="Save">
+						<button class="save">Done</button>
 					</div>
-				</form>
+				</div>
 			</div>
 			<ul id="media-container" class="col-12">
 				<li class="card" id="add-media">

@@ -28,11 +28,6 @@ function genAddMediaCard(){
 	addMediaEle.addEventListener("click", addMedia);
 	return addMediaEle;
 }
-function genGenresButton(){
-	let genreBtn = document.createElement("button");
-	genreBtn.innerText = "Genre manager";
-	return genreBtn;
-}
 function purgeMediaContainer(){
 	while(mediaContainer.children.length > 2){
 		mediaContainer.removeChild(mediaContainer.firstChild);

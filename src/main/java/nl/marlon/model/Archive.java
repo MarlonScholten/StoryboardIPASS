@@ -79,6 +79,14 @@ public class Archive {
 		}
 	}
 
+	public boolean deleteGenre(Genre target){
+		if(allGenres.contains(target)){
+			allGenres.remove(target);
+			return true;
+		}
+		return false;
+	}
+
 	public Genre getGenreByName(String name){
 		for(Genre genre: allGenres){
 			if (genre.getName().equals(name)){

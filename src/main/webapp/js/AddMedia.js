@@ -2,7 +2,7 @@ let addBtn = document.querySelector("#add-media");
 addBtn.addEventListener("click", addMedia);
 
 let modal = document.querySelector("#add-media-modal");
-let modalForm = modal.querySelector("#add-media-form");
+let modalForm = document.querySelector("#add-media-form");
 
 // Image preview, this code needs to be active all the time because of the onchange
 let imgHolder = document.querySelector("#image-holder");
@@ -80,7 +80,6 @@ export function createCheckBoxHidden(name){
 	boxHidden.setAttribute("type", "hidden");
 	boxHidden.setAttribute("value", "false");
 	boxHidden.setAttribute("name", name);
-	boxHidden.id = name;
 	return boxHidden;
 }
 function populateGenrePicker(){

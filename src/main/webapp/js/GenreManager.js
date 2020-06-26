@@ -2,46 +2,109 @@ import {openModal} from "./ShowMedia.js";
 import {closeModal} from "./ShowMedia.js";
 import {createLabelFor} from "./AddMedia.js";
 import {createCheckBox} from "./AddMedia.js";
-import {createCheckBoxHidden} from "./AddMedia.js";
 
 let genreModal = document.querySelector("#genre-mngr-modal");
 let genreToggler = document.querySelector("#genre-btn");
+let genreForm = document.querySelector('#genre-mngr-form');
+let submitHolder = document.querySelector('#submit-holder');
 
+function genDelSubmit(){
+	let button = document.createElement("button");
+	button.setAttribute("value", "");
+	button.id = "genre-remove";
+	button.setAttribute("disabled", "");
+	let icon = document.createElement("i");
+	icon.classList.add("fas");
+	icon.classList.add("fa-trash-alt");
+	button.append(icon);
+	return button;
+}
+async function deleteGenre(name){
+	const fetchoptions = {
+		method: 'DELETE',
+		headers: {
+			'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
+		}
+	};
+	return fetch("rest/user/genres/delete/" + name, fetchoptions)
+		.then(function (response){
+			if(response.ok) return response;
+			else if(response.status===401) console.log("unauthorized");
+			else if(response.status===409) console.log("cannot delete");
+		});
+}
 genreToggler.addEventListener("click", function(){
 	openModal(genreModal);
+	let delBtn = genDelSubmit();
+	while(submitHolder.firstChild){
+		submitHolder.removeChild(submitHolder.lastChild);
+	}
+	submitHolder.append(
+		delBtn
+	);
+	genreForm.addEventListener('change', function() {
+		if(boxesAreChecked()){
+			delBtn.removeAttribute("disabled");
+		} else{
+			delBtn.setAttribute("disabled", "");
+		}
+	});
+	// TODO: 1 voor 1 of per 2 een genre(s) deleten blijkt goed te gaan, maar bij 3 tegelijkertijd gaat alles fout
+	// TODO: Waarschijnlijk heeft het met de constante fetches achter elkaar.
+	// TODO: Dus je kan twee dingen doen: 1.Je stuurt in 1 keer een lijst met genres naar de delete en doet zo een bulk delete. 2.(NIET WENSELIJK) Je limiteert het aantal vakjes dat je kan selecteren naar 2
+	delBtn.addEventListener("click", function(){
+		let checkboxes = genreForm.querySelectorAll("input[type=checkbox]");
+		for(let i=0;i<checkboxes.length;i++){
+			if(checkboxes[i].checked){
+				deleteGenre(checkboxes[i].name).then(r =>{
+					genreList.removeChild(checkboxes[i].parentNode.parentNode);
+				});
+			}
+		}
+	});
 	populateGenreList()
 });
-let cancel = genreModal.querySelector(".cancel");
-cancel.addEventListener("click", function(){
+let done = genreModal.querySelector(".save");
+done.addEventListener("click", function(){
 	closeModal(genreModal);
+	genreForm.reset();
+	location.reload();
 });
 
-let genreList = document.querySelector("#genre-list-holder");
-function populateGenreList(){
-	while (genreList.firstChild) {
-		genreList.removeChild(genreList.lastChild);
-	}
+function createGenreItem(name){
+	let li = document.createElement("li");
+	let label = createLabelFor(name);
+	label.append(
+		createCheckBox(name)
+	);
+	li.append(label);
+	return li;
+}
+
+function getGenres(){
 	const fetchoptions = {
 		method: 'GET',
 		headers: {
 			'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
 		}
 	};
-
-	fetch("rest/user/genres", fetchoptions)
+	return fetch("rest/user/genres", fetchoptions)
 		.then(function (response){
 			if(response.ok) return response.json();
 			else if(response.status===401) console.log("unauthorized");
-		}).then(genres => {
+		});
+}
+
+let genreList = document.querySelector("#genre-list-holder");
+function populateGenreList(){
+	while (genreList.firstChild) {
+		genreList.removeChild(genreList.lastChild);
+	}
+
+	getGenres().then(genres => {
 		for(let i=0;i<genres.length;i++){
 			let name = genres[i].name;
-			let li = document.createElement("li");
-			let label = createLabelFor(name);
-			label.append(
-				createCheckBox(name),
-				createCheckBoxHidden(name)
-			);
-			li.append(label);
+			let li = createGenreItem(name);
 			genreList.append(li);
 		}
 	});
@@ -52,8 +115,37 @@ addBtn.addEventListener("click", function(){
 	addNewGenre()
 });
 function addNewGenre(){
-	let newName = nameInput.value;
-	// TODO: voeg nieuwe genre toe aan lijst.
-	// TODO: maybe bij het toevoegen al een POST request sturen, en bij het verwijderen een DELETE in plaats van 1 formulier beide laten doen.
-	console.log(newName);
+	let rawName = nameInput.value;
+	let newName = rawName.charAt(0).toUpperCase() + rawName.slice(1).toLowerCase();
+
+	const fetchoptions = {
+		method: 'POST',
+		headers: {
+			'Authorization': 'Bearer ' + window.sessionStorage.getItem("myJWT")
+		}
+	};
+
+	fetch("rest/user/genres/add/" + newName, fetchoptions)
+		.then(function (response){
+			if(response.ok) return response.json();
+			else if(response.status===401) console.log("unauthorized");
+			else if(response.status===409) console.log("genre already exists");
+		}).then(genre => {
+			if(genre !== undefined){
+				let li = createGenreItem(newName);
+				genreList.append(li);
+				nameInput.value = "";
+			} else{
+				alert("Genre already exists");
+			}
+		});
+}
+function boxesAreChecked(){
+	let checkboxes = genreForm.querySelectorAll("input[type=checkbox]");
+	for(let i=0;i<checkboxes.length;i++){
+		if(checkboxes[i].checked){
+			return true;
+		}
+	}
+	return false;
 }

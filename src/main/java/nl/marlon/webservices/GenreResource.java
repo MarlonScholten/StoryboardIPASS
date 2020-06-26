@@ -1,6 +1,7 @@
 package nl.marlon.webservices;
 
 import nl.marlon.Exceptions.UnauthorizedException;
+import nl.marlon.model.Genre;
 import nl.marlon.model.User;
 
 import javax.ws.rs.*;
@@ -13,7 +14,6 @@ import java.util.ArrayList;
 
 @Path("user/genres")
 public class GenreResource {
-
 	@GET
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAllGenres(@Context SecurityContext msc) throws UnauthorizedException {
@@ -22,10 +22,44 @@ public class GenreResource {
 		}
 		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
 		ArrayList allGenres = user.getArchive().getAllGenres();
-		if(allGenres != null){
+		if(!(allGenres == null)){
 			return Response.ok(allGenres).build();
 		}
 		return Response.status(404).build();
+	}
+	@Path("/add/{name}")
+	@POST
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response addNewGenre(@Context SecurityContext msc,
+								@PathParam("name") String name) throws UnauthorizedException {
+		if(msc == null){
+			return Response.status(409).build();
+		}
+		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
+		Genre newGenre = new Genre(name);
+		if(user.getArchive().addGenre(newGenre)){
+			return Response.ok(newGenre).build();
+		} else {
+			return Response.status(409).build();
+		}
+	}
+	@DELETE
+	@Path("/delete/{name}")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response deleteGenre(@Context SecurityContext msc,
+								@PathParam("name") String name) throws UnauthorizedException {
+		if(msc == null){
+			System.out.println("msc is null");
+			return Response.status(409).build();
+		}
+		User user = User.getUserByEmail(msc.getUserPrincipal().getName());
+		Genre target = user.getArchive().getGenreByName(name);
+		if(!(target == null)){
+			if(user.getArchive().deleteGenre(target)){
+				return Response.ok().build();
+			}
+		}
+		return Response.status(409).build();
 	}
 }
 
