@@ -103,12 +103,12 @@ public class ContextListener implements ServletContextListener {
 		demo.getArchive().addMedia(matrix);
 		demo.getArchive().addMedia(fightclub);
 		demo.getArchive().addMedia(killbill);
-//		demo.getArchive().addMedia(madeabyss);
-//		demo.getArchive().addMedia(berserk);
-//		demo.getArchive().addMedia(fma);
-//		demo.getArchive().addMedia(breakingbad);
-//		demo.getArchive().addMedia(narcos);
-//		demo.getArchive().addMedia(alteredcarbon);
+		demo.getArchive().addMedia(madeabyss);
+		demo.getArchive().addMedia(berserk);
+		demo.getArchive().addMedia(fma);
+		demo.getArchive().addMedia(breakingbad);
+		demo.getArchive().addMedia(narcos);
+		demo.getArchive().addMedia(alteredcarbon);
 	}
 	public void contextDestroyed(ServletContextEvent sce){
 
