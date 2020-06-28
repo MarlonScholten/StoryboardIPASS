@@ -117,6 +117,7 @@ export function showSingleMedia(media){
 	}
 	let saveBtn = document.createElement("input");
 	saveBtn.setAttribute("type", "submit");
+	saveBtn.setAttribute("value", "Save");
 	saveBtn.classList.add("save");
 	let cancelBtn = document.createElement("input");
 	cancelBtn.setAttribute("type", "button");

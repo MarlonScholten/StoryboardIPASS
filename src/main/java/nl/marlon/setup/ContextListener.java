@@ -94,9 +94,9 @@ public class ContextListener implements ServletContextListener {
 		demo.getArchive().addGenre(adventure);
 
 		demo.getArchive().addMedia(gulag);
-		demo.getArchive().addMedia(crimeAndPun);
-		demo.getArchive().addMedia(catcherRye);
-		demo.getArchive().addMedia(notesUnder);
+//		demo.getArchive().addMedia(crimeAndPun);
+//		demo.getArchive().addMedia(catcherRye);
+//		demo.getArchive().addMedia(notesUnder);
 		demo.getArchive().addMedia(dororo);
 		demo.getArchive().addMedia(vinland);
 		demo.getArchive().addMedia(towergod);
@@ -106,9 +106,9 @@ public class ContextListener implements ServletContextListener {
 		demo.getArchive().addMedia(madeabyss);
 		demo.getArchive().addMedia(berserk);
 		demo.getArchive().addMedia(fma);
-		demo.getArchive().addMedia(breakingbad);
-		demo.getArchive().addMedia(narcos);
-		demo.getArchive().addMedia(alteredcarbon);
+//		demo.getArchive().addMedia(breakingbad);
+//		demo.getArchive().addMedia(narcos);
+//		demo.getArchive().addMedia(alteredcarbon);
 	}
 	public void contextDestroyed(ServletContextEvent sce){
 
