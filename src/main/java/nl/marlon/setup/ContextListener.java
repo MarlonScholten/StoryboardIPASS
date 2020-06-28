@@ -41,6 +41,14 @@ public class ContextListener implements ServletContextListener {
 		Anime dororo = new Anime("Dororo", "A cursed boy slowly regains his humanity", braveImg, "dark", bravegenres, 1, 5, "");
 		Anime vinland = new Anime("Vinland saga", "Vikings", braveImg, "realistic", bravegenres, 1, 5, "");
 		Anime towergod = new Anime("Tower of God", "Tower of God centers around a boy called Twenty-Fifth Bam, who has spent most of his life trapped beneath a vast and mysterious Tower, with only his close friend, Rachel, to keep him company. When Rachel enters the Tower, Bam manages to open the door into it as well, and faces challenges at each floor of this tower as he tries to find his closest companion.", braveImg, "mysterious", towergenres, 1, 13, "https://www.kickassanime.rs/anime/kami-no-tou-346996/episode-12-914903");
+		Anime demonslayer = new Anime("Demon Slayer", "A boy trains to become a skilled sword-fighter.", braveImg, "mysterious", towergenres, 1, 13, "https://www.kickassanime.rs/anime/kami-no-tou-346996/episode-12-914903");
+		Anime madeabyssanime = new Anime("Made in Abyss", "A dark adventure going all the way down into the abyss", braveImg, "mysterious", towergenres, 1, 13, "https://www.kickassanime.rs/anime/kami-no-tou-346996/episode-12-914903");
+		Anime onepiece = new Anime("One Piece", "A pirate adventure looking for the One Piece treasure", braveImg, "mysterious", towergenres, 1, 13, "https://www.kickassanime.rs/anime/kami-no-tou-346996/episode-12-914903");
+		Anime psychopass = new Anime("Psycho Pass", "Futuristic police series", braveImg, "mysterious", towergenres, 1, 13, "https://www.kickassanime.rs/anime/kami-no-tou-346996/episode-12-914903");
+		Anime steinsgate = new Anime("Steins Gate", "A time machine was invented", braveImg, "mysterious", towergenres, 1, 13, "https://www.kickassanime.rs/anime/kami-no-tou-346996/episode-12-914903");
+		Anime hunterxhunter = new Anime("Hunter X Hunter", "", braveImg, "mysterious", towergenres, 1, 13, "https://www.kickassanime.rs/anime/kami-no-tou-346996/episode-12-914903");
+		Anime parasyte = new Anime("Parasyte", "", braveImg, "mysterious", towergenres, 1, 13, "https://www.kickassanime.rs/anime/kami-no-tou-346996/episode-12-914903");
+		Anime souleater = new Anime("Soul Eater", "", braveImg, "mysterious", towergenres, 1, 13, "https://www.kickassanime.rs/anime/kami-no-tou-346996/episode-12-914903");
 
 		Movie matrix =  new Movie("The Matrix", "blue pill or red pill", braveImg, "Lana & Lilly Wachowski", false);
 		Movie fightclub =  new Movie("Fight Club", "its about a fight club", braveImg, "David Fincher", true);
@@ -72,6 +80,14 @@ public class ContextListener implements ServletContextListener {
 		marlon.getArchive().addMedia(dororo);
 		marlon.getArchive().addMedia(vinland);
 		marlon.getArchive().addMedia(towergod);
+		marlon.getArchive().addMedia(demonslayer);
+		marlon.getArchive().addMedia(madeabyssanime);
+		marlon.getArchive().addMedia(onepiece);
+		marlon.getArchive().addMedia(psychopass);
+		marlon.getArchive().addMedia(steinsgate);
+		marlon.getArchive().addMedia(hunterxhunter);
+		marlon.getArchive().addMedia(parasyte);
+		marlon.getArchive().addMedia(souleater);
 		marlon.getArchive().addMedia(matrix);
 		marlon.getArchive().addMedia(fightclub);
 		marlon.getArchive().addMedia(killbill);
@@ -94,9 +110,9 @@ public class ContextListener implements ServletContextListener {
 		demo.getArchive().addGenre(adventure);
 
 		demo.getArchive().addMedia(gulag);
-//		demo.getArchive().addMedia(crimeAndPun);
-//		demo.getArchive().addMedia(catcherRye);
-//		demo.getArchive().addMedia(notesUnder);
+		demo.getArchive().addMedia(crimeAndPun);
+		demo.getArchive().addMedia(catcherRye);
+		demo.getArchive().addMedia(notesUnder);
 		demo.getArchive().addMedia(dororo);
 		demo.getArchive().addMedia(vinland);
 		demo.getArchive().addMedia(towergod);
