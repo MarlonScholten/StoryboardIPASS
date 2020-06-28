@@ -14,7 +14,7 @@ function genDelSubmit(){
 	button.setAttribute("type", "submit");
 	button.setAttribute("form", "genre-mngr-form");
 	button.id = "genre-remove";
-	button.setAttribute("disabled", "");
+	// button.setAttribute("disabled", "");
 	let icon = document.createElement("i");
 	icon.classList.add("fas");
 	icon.classList.add("fa-trash-alt");
@@ -30,13 +30,13 @@ genreToggler.addEventListener("click", function(){
 	submitHolder.append(
 		delBtn
 	);
-	genreForm.addEventListener('change', function() {
-		if(boxesAreChecked()){
-			delBtn.removeAttribute("disabled");
-		} else{
-			delBtn.setAttribute("disabled", "");
-		}
-	});
+	// genreForm.addEventListener('change', function() {
+	// 	if(boxesAreChecked()){
+	// 		delBtn.removeAttribute("disabled");
+	// 	} else{
+	// 		delBtn.setAttribute("disabled", "true");
+	// 	}
+	// });
 	delBtn.addEventListener("click", function(){
 		let formData = new FormData(genreForm);
 		let encData = new URLSearchParams(formData.entries());
