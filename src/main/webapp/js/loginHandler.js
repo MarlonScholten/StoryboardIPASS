@@ -7,7 +7,7 @@ function login(event){
 	fetch("rest/authenticate", {method:'POST', body: encData})
 		.then(function(response){
 			if(response.ok) return response.json();
-			else throw "Wrong email/password";
+			else alert("Wrong email/password combination");
 		})
 		.then(myJson => {
 			window.sessionStorage.clear();

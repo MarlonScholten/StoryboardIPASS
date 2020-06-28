@@ -2,6 +2,7 @@ package nl.marlon.webservices;
 
 import nl.marlon.Exceptions.UnauthorizedException;
 import nl.marlon.model.Genre;
+import nl.marlon.model.Media;
 import nl.marlon.model.User;
 
 import javax.ws.rs.*;
@@ -63,6 +64,14 @@ public class GenreResource {
 		}
 		for(Genre genre : genreObjs){
 			user.getArchive().deleteGenre(genre);
+		}
+		ArrayList<Media> allMedia = user.getArchive().getAllMedia();
+		for(Media media: allMedia){
+			for(Genre genre : genreObjs){
+				if(media.getGenres().contains(genre)){
+					media.getGenres().remove(genre);
+				}
+			}
 		}
 		return Response.ok().build();
 	}
